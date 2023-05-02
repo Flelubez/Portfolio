@@ -1,0 +1,16 @@
+.container {
+    font-size: 2.5rem;
+}
+
+
+.description {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.image {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* Ajoutez vos styles pour la rotation de l'image ici */

@@ -1,0 +1,77 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 80px;
+    width: 97%;
+    padding: 0 20px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+}
+
+.navitems {
+    font-size: 1.6rem;
+    margin-right: 30px;
+    transition: transform 0.35s ease-in-out;
+    cursor: pointer;
+}
+
+.navitems:hover {
+    transform: scale(1.2);
+    color:rgb(212, 223, 253)
+}
+
+.traduction {
+    background-color: rgb(37, 36, 36);
+    color: white;
+    height: 2.5rem;
+    width: 6.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    border: 2px solid #545454;
+    transition: transform 0.35s ease-in-out;
+}
+
+.traduction:focus {
+    outline: none;
+    border-color: #66afe9;
+}
+
+.traduction:hover {
+    background-color: rgb(27, 27, 27);
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .links {
+            display: flex;
+            justify-content: flex-start;
+        }
+    .links a:not(:last-child) {
+        margin-right: 20px;
+        /* Ajouter de la marge horizontale entre les liens, sauf le dernier */
+    }
+
+    .navitems {
+        margin-right: 0;
+        margin-bottom: 0px;
+        display: block;
+        font-size: 1.4rem;
+    }
+        .navitems:hover {
+            transform: scale(1.1);
+        }
+        .traduction {
+    font-size: 0.7rem;
+    width: 4.4rem;
+    margin-right: 3rem;
+
+}
+}
+
+

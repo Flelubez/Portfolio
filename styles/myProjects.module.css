@@ -1,0 +1,133 @@
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+}
+
+.myProjects {
+    font-size: 4rem;
+    background-color: rgb(42, 42, 42);
+    width: 100%;
+    height: 6rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.myProjects .letter {
+    animation: bounce-in-top 0.8s ease-out;
+    animation-iteration-count: 2;
+    display: inline-block;
+}
+
+.firstContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 86vh;
+    /* background-color: rgb(24, 138, 81); */
+    color: black;
+}
+
+.beOnTimeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 92vh;
+    background-color: rgb(23, 23, 23);
+    color: white;
+}
+
+.netflixCopyContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 92vh;
+    /* background-color: rgb(24, 138, 81); */
+    color: black;
+}
+
+.imagesBeOnTime {
+    height: auto;
+    width: 70%;
+    cursor: pointer;
+}
+
+.textBeOnTime {
+    height: auto;
+    width: 30%;
+}
+
+@media (max-width: 768px) {
+
+    .beOnTimeContainer,
+    .netflixCopyContainer {
+        flex-direction: column;
+        align-items: center;
+        height: 150vh;
+    }
+
+    .textBeOnTime {
+        width: 100%;
+        margin-bottom: 20px;
+        height: auto;
+    }
+
+    .imagesBeOnTime {
+        width: 100%;
+        height: auto;
+        margin-right: 2.5rem;
+    }
+}
+
+/* Vos autres styles existants */
+
+
+.descriptionContainer * {
+    position: relative;
+    z-index: 2;
+    pointer-events: auto;
+}
+
+.imageContainer {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes bounce-in-top {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+        color: rgb(57, 116, 210);
+    }
+
+    25% {
+        transform: translateY(10px);
+        color: rgb(57, 116, 210);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        color: rgb(57, 116, 210);
+    }
+
+    75% {
+        transform: translateY(10px);
+        color: rgb(57, 116, 210);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

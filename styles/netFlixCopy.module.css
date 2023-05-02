@@ -1,0 +1,26 @@
+/* NetFlixCopy.module.css */
+.swiper-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  max-width: 1050px;
+  height: auto;
+  margin-top: 50px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+  .swiper-slide img {
+    margin-top: 25px;
+  }
+}
