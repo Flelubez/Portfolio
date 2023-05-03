@@ -116,7 +116,7 @@ const renderBullet = (index, className) => {
         </SwiperSlide>
         <div
           className="swiper-pagination"
-          style={{ position: "absolute", bottom: "-5px" }}
+          style={{ position: "absolute", bottom: "0px" }}
         ></div>
       </Swiper>
     </Slide>

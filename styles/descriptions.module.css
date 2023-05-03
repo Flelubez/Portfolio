@@ -57,20 +57,22 @@
 .bullet {
     width: 40px;
     height: 40px;
-    background-color: rgb(255, 62, 62);
-}
-
-.bulletActive {
-    width: 40px;
-    height: 40px;
-    background-color: rgb(255, 87, 87);
+    background-color: #007AFF
 }
 
 .bullet2 {
     width: 40px;
     height: 40px;
-    background-color: rgb(97, 92, 186);
+    background-color: rgb(255, 87, 87);
 }
+
+.bulletActive {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(115, 110, 216);
+}
+
+
 
 .bulletActive2 {
     width: 40px;
