@@ -72,7 +72,7 @@ function LandingOnSite() {
             <div className={styles.title}>
               <span className={styles.contactLetter}>
                 {" "}
-                <FormattedMessage id="1" defaultMessage=" " />
+                <FormattedMessage id="1" defaultMessage="Welcome to my portfolio" />
               </span>
               <span className={styles.contactLetter}>
                 {" "}

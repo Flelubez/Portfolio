@@ -48,10 +48,6 @@ const handleScroll = (e) => {
   if (currentStepIndex === 7 && direction === 1) {
     nextIndex = 0; // Force à aller à la section "my-projects3"
   }
-  if (currentStepIndex === 0 && direction === -1) {
-    nextIndex = 7; // Force à aller à la section "my-projects3"
-  }
-
   // Check if double scroll occurred within 500ms
   if (currentTime - lastScrollTime < 300) {
     // Ignore this scroll and scroll to the current section again

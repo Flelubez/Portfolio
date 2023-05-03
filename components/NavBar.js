@@ -1,12 +1,11 @@
 import React from "react";
 import { useEffect, useRef, useState } from "react";
 import styles from "../styles/navBar.module.css";
-import { FormattedMessage, useIntl } from "react-intl";
+import { FormattedMessage } from "react-intl";
 import { useDispatch, useSelector } from "react-redux";
 import { setLanguage } from "../reducers/language";
 
 function NavBar({ updateSectionIndex }) {
-  const intl = useIntl();
   const dispatch = useDispatch();
   const locale = useSelector((state) => state.language.value);
 

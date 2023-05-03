@@ -31,6 +31,16 @@
     "18": ".",
     "19": "",
     "20": "",
+        "101" : "M",
+    "102" : "y",
+    "103" : "P",
+    "104" : "r",
+    "105" : "o",
+    "106" : "j",
+    "107" : "e",
+    "108" : "c",
+    "109" : "t",
+    "110" : "s",
     "header1" : "Hello and welcome to my portfolio. I am a web development enthusiast seeking new opportunities to enhance my skills and knowledge in this exciting field.",
     "header2" : "I am open to job offers as well as collaborations with other developers to work together on future projects.",
     "header3" : "Through my previous work experiences, I have developed valuable skills for any profession, such as adaptability, communication, creativity, and attention to detail, as well as my ability to learn quickly. As a self-taught developer, I have learned to work independently and find creative solutions to problems that arise. My teaching experience has also allowed me to develop important social skills, such as teamwork, sociability, and empathy. I am confident that these skills will allow me to integrate easily into a team of developers, positively contribute to projects, and continue to learn and grow in this exciting field.",
@@ -43,7 +53,11 @@
     "mailSucces" : "Email sent with success ! 😃",
     "mailValid" : "Please, enter a valid email 🙁",
     "nameValid" : "Please, add a name 🙁",
-    "messageValid" : "Please, add a message 😒"
+    "messageValid" : "Please, add a message 😒",
+    "NetFlixCopyDescription" : "Here is my first project, Netflix Like, which offers a reinterpretation of the Netflix presentation page, complete with a backend for managing favorites and secure login management.",
+    "BeOnTimeDescription" : "BeOnTime is my second project, designed in collaboration with three juniors and under my supervision. Its purpose is to assist accountants in managing their time and tasks by making their work easier through a comprehensive application featuring user authentication.",
+    "HearthstoneDescription" : "Hearthstone Filter is my third project, and it helped me deepen my understanding of filters and the use of external APIs. It catalogs the entirety of the cards from the Hearthstone game.",
+    "iaVolleyDescription" : "IaVolley, my fourth project, allowed me to explore artificial intelligence through the Brain.js library. The interface, connected to a backend and a database, enables the addition and utilization of data processed by the neural network to predict victories and defeats based on observed statistics."
   },
   "fr": {
     "navAbout": "Mon profil",
@@ -80,6 +94,15 @@
     "21": "i",
     "22": "o",
     "23": ".",
+    "101" : "M",
+    "102" : "es",
+    "103" : "P",
+    "104" : "r",
+    "105" : "o",
+    "106" : "j",
+    "107" : "e",
+    "108" : "t",
+    "109" : "s",
     "header1" : "Bonjour et bienvenue sur mon portfolio. Je suis un passionné de développement web à la recherche de nouvelles opportunités pour améliorer mes compétences et mes connaissances dans ce domaine passionnant.",
     "header2" : "Je suis ouvert aux offres d'emploi ainsi qu'aux collaborations avec d'autres développeurs pour travailler sur des projets futurs.",
     "header3" : "Grâce à mes expériences professionnelles antérieures, j'ai développé des compétences essentielles pour toute profession, telles que l'adaptabilité, la communication, la créativité et l'attention aux détails, ainsi qu'une capacité à apprendre rapidement. En tant que développeur autodidacte, j'ai appris à travailler de manière indépendante et à trouver des solutions créatives aux problèmes qui surviennent. Mon expérience dans l'enseignement m'a également permis de développer des compétences sociales importantes, telles que le travail d'équipe, la sociabilité et l'empathie. Je suis convaincu que ces compétences me permettront de m'intégrer facilement dans une équipe de développeurs, de contribuer positivement aux projets et de continuer à apprendre et à évoluer dans ce domaine passionnant.",
@@ -92,6 +115,10 @@
     "mailSuccess" : "Email envoyé avec succès ! 😃",
     "mailValid" : "Entrez un email valide 🙁",
     "nameValid" : "Veuillez ajouter un nom 🙁",
-    "messageValid" : "Veuillez ajouter un message 😒"
+    "messageValid" : "Veuillez ajouter un message 😒",
+    "NetFlixCopyDescription" : "Voici mon premier projet, Netflix Like, qui propose une réinterprétation de la page de présentation de Netflix, avec un backend pour administrer les favoris et une gestion sécurisée du login.",
+    "BeOnTimeDescription" : "BeOnTime est mon deuxième projet, conçu en collaboration avec trois juniors et sous ma gestion. Il a pour but d'assister les comptables dans la gestion de leur temps et de leurs missions, en facilitant leur travail à travers une application complète comportant une authentification utilisateur.",
+    "HearthstoneDescription" : "Hearthstone Filter est mon troisième projet, et il m'a servi à approfondir mes connaissances en matière de filtres et d'utilisation d'API externes. Il répertorie l'intégralité des cartes du jeu Hearthstone.",  
+    "iaVolleyDescription" : "IaVolley, mon quatrième projet, m'a permis d'explorer l'intelligence artificielle grâce à la bibliothèque Brain.js. L'interface, liée à un backend et une base de données, autorise l'ajout et l'exploitation de données traitées par le réseau de neurones pour prédire les victoires et défaites en se basant sur les statistiques observées."
   }
 }

@@ -1,0 +1,79 @@
+.container {
+    font-size: 2.5rem;
+}
+
+
+.cardBack {
+    width: 30vw;
+    height: 70vh;
+    font-size: 2rem;
+}
+
+.cardFront {
+    width: 30vw;
+    height: 70vh;
+    font-size: 2rem;
+}
+
+.imageFront {
+    height: 70%;
+    width: 98%;
+    margin-bottom: -32%;
+}
+
+.imageBack {
+    height: "40%";
+    width: "70%";
+}
+
+@media (max-width: 767px) {
+
+    .cardBack {
+            width: 80%;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            
+    }
+
+    .cardFront {
+             width: 80%;
+             font-size: 3rem;
+             line-height: 2rem;
+    }
+
+    .imageFront {
+    margin-top: "80%";
+    margin-bottom: -41%;
+    }
+
+    .imageBack {
+    margin-bottom: -9vh;
+    height : 40%;
+    width: "70%";
+    }
+}
+
+
+.bullet {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 62, 62);
+}
+
+.bulletActive {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 87, 87);
+}
+
+.bullet2 {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(97, 92, 186);
+}
+
+.bulletActive2 {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+}

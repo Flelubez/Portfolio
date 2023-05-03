@@ -2,21 +2,23 @@ import { useState, useEffect } from "react";
 import Swiper from "swiper";
 import "swiper/swiper-bundle.min.css";
 import { GiReturnArrow } from "react-icons/gi";
-import { Slide, Zoom, Flip, Bounce, Rotate, Fade, Roll } from "react-reveal";
+import { Slide } from "react-reveal";
+import styles from "../../styles/descriptions.module.css";
+import { FormattedMessage } from "react-intl";
 
-function IaVolleyDescription() {
+function NetFlixCopyDescription() {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [screenWidth, setScreenWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : 768
   );
 
-const handleKeyDown = (event, targetId) => {
-  if (event.keyCode === 32) {
-    event.preventDefault();
-    handleClick();
-  }
-};
+  const handleKeyDown = (event) => {
+    if (event.keyCode === 32) {
+      event.preventDefault();
+      handleClick();
+    }
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -70,8 +72,6 @@ const handleKeyDown = (event, targetId) => {
     fontSize: "3rem",
     backgroundColor: "rgb(33, 31, 31)",
     color: "white",
-    width: "30vw",
-    height: "70vh",
     backfaceVisibility: "hidden",
     position: "absolute",
     top: 40,
@@ -83,11 +83,6 @@ const handleKeyDown = (event, targetId) => {
     flexDirection: "column",
     justifyContent: "center",
     boxShadow: "0px 0px 10px 5px rgba(27, 39, 82, 0.5)",
-    ...(screenWidth < 768 && {
-      width: "80%",
-      fontSize: "1.5rem",
-      lineHeight: "2rem",
-    }),
   };
 
   const cardBackStyle = {
@@ -95,8 +90,6 @@ const handleKeyDown = (event, targetId) => {
     textAlign: "center",
     backgroundColor: "rgb(33, 31, 31)",
     color: "white",
-    width: "30vw",
-    height: "70vh",
     backfaceVisibility: "hidden",
     position: "absolute",
     top: 40,
@@ -106,7 +99,6 @@ const handleKeyDown = (event, targetId) => {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    fontSize: "2rem",
     lineHeight: "3rem",
     boxShadow: "0px 0px 10px 5px rgba(27, 39, 82, 0.5)",
     ...(screenWidth < 768 && {
@@ -123,11 +115,10 @@ const handleKeyDown = (event, targetId) => {
     textAlign: "center",
     transition: "color 1s ease-in-out",
     transitionDuration: "1s",
+    marginTop: "5%",
   };
 
   const imageStyleFront = {
-    height: "90%",
-    width: "93%",
     marginTop: "2%",
     textAlign: "center",
     position: "absolute",
@@ -158,14 +149,15 @@ const handleKeyDown = (event, targetId) => {
         <div className="swiper-container">
           <div className="swiper-wrapper">
             <div className="swiper-slide" style={cardStyle}>
-              <div style={cardInnerStyle} onClick={handleClick}>
-                <div style={cardFrontStyle}>
+              <div style={cardInnerStyle}>
+                <div className={styles.cardFront} style={cardFrontStyle}>
                   <img
+                    className={styles.imageFront}
                     style={imageStyleFront}
                     src="/18.png"
                     alt="Soft Skills"
                   />
-                  <div>Netflix Copy </div>
+                  <div>Netflix Like</div>
                   <div
                     style={buttonStyle}
                     onMouseEnter={handleMouseEnter}
@@ -174,14 +166,23 @@ const handleKeyDown = (event, targetId) => {
                     <GiReturnArrow />
                   </div>
                 </div>
-                <div style={cardBackStyle}>
-                  <img style={imageStyleBack} src="/18.png" alt="Soft Skills" />
+                <div style={cardBackStyle} className={styles.cardBack}>
+                  <img
+                    style={imageStyleBack}
+                    className={styles.imageBack}
+                    src="/18.png"
+                    alt="Soft Skills"
+                  />
                   <div style={{ textAlign: "left", marginLeft: "50px" }}>
-                    Voici mon premier projet, appelé BeOnTime. Ce projet à été
-                    manager par moi-même et en collaboration avec 3 étudiants.
-                    Le but est d'aider les comptables afin de mieux gérer leur
-                    temps, leurs missions et ainsi fluidifié leur travail via
-                    une application complète.
+                    <FormattedMessage
+                      id="NetFlixCopyDescription"
+                      defaultMessage=" IaVolley, mon quatrième projet, m'a permis d'explorer
+                    l'intelligence artificielle grâce à la bibliothèque
+                    Brain.js. L'interface, liée à un backend et une base de
+                    données, autorise l'ajout et l'exploitation de données
+                    traitées par le réseau de neurones pour prédire les
+                    victoires et défaites en se basant sur les statistiques observées."
+                    />
                   </div>
                   <div
                     style={buttonStyle}
@@ -200,4 +201,4 @@ const handleKeyDown = (event, targetId) => {
     </Slide>
   );
 }
-export default IaVolleyDescription;
+export default NetFlixCopyDescription;

@@ -8,6 +8,7 @@ import HearthstoneDescription from "./projects/HearthstoneDescription";
 import Hearthstone from "./projects/Hearthstone";
 import IaVolleyDescription from "./projects/IaVolleyDescription";
 import IaVolley from "./projects/IaVolley";
+import { FormattedMessage } from "react-intl";
 
 function MyProjects() {
   const [isVisible, setIsVisible] = useState(false);
@@ -37,37 +38,37 @@ function MyProjects() {
         {isVisible && (
           <>
             <span className={styles.letter} style={{ animationDelay: "0s" }}>
-              M
+              <FormattedMessage id="101" defaultMessage="My Projects" />
             </span>
             <span className={styles.letter} style={{ animationDelay: "0.4s" }}>
-              y
+              <FormattedMessage id="102" defaultMessage=" " />
             </span>
             <span className={styles.letter} style={{ animationDelay: "0.2s" }}>
               &nbsp;
             </span>
             <span className={styles.letter} style={{ animationDelay: "0.8s" }}>
-              P
+              <FormattedMessage id="103" defaultMessage=" " />
             </span>
             <span className={styles.letter} style={{ animationDelay: "0.6s" }}>
-              r
+              <FormattedMessage id="104" defaultMessage=" " />
             </span>
             <span className={styles.letter} style={{ animationDelay: "1.2s" }}>
-              o
+              <FormattedMessage id="105" defaultMessage=" " />
             </span>
             <span className={styles.letter} style={{ animationDelay: "1.0s" }}>
-              j
+              <FormattedMessage id="106" defaultMessage=" " />
             </span>
             <span className={styles.letter} style={{ animationDelay: "1.6s" }}>
-              e
+              <FormattedMessage id="107" defaultMessage=" " />
             </span>
             <span className={styles.letter} style={{ animationDelay: "1.4s" }}>
-              c
+              <FormattedMessage id="108" defaultMessage=" " />
             </span>
             <span className={styles.letter} style={{ animationDelay: "2s" }}>
-              t
+              <FormattedMessage id="109" defaultMessage=" " />
             </span>
             <span className={styles.letter} style={{ animationDelay: "1.8s" }}>
-              s
+              <FormattedMessage id="110" defaultMessage=" " />
             </span>
           </>
         )}

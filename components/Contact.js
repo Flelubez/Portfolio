@@ -106,17 +106,8 @@ return (
     </div>
     <div className={styles.container}>
       <ToastContainer
-        position="bottom-left" // top-right, top-center, top-left, bottom-right, bottom-center, bottom-left
-        toastStyle={{
-          backgroundColor: "rgb(64, 122, 203)", // Couleur d'arrière-plan
-          color: "white", // Couleur du texte
-          fontSize: "3rem", // Taille du texte
-          height: "7rem",
-          width: "49rem",
-          borderRadius: "0.5rem",
-          textAlign: "center",
-          
-        }}
+        position="bottom-center" // top-right, top-center, top-left, bottom-right, bottom-center, bottom-left
+        toastClassName={`${styles.Toast}`}
       />
       <div className={styles.form}>
         <Rotate top right duration={5000}>
