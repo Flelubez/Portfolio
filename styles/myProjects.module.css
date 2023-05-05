@@ -32,7 +32,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    height: 86vh;
+    height: 82.6vh;
     /* background-color: rgb(24, 138, 81); */
     color: black;
 }
@@ -57,6 +57,16 @@
     color: black;
 }
 
+   .iaVolleyContainer {
+    display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        height: 92vh;
+        background-color: rgb(23, 23, 23);
+        color: white;
+   }
+
 .imagesBeOnTime {
     height: auto;
     width: 70%;
@@ -68,19 +78,89 @@
     width: 30%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1450px) {
+    .firstContainer {
+        flex-direction: column;
+        height: 145vh;
+    }
+
+    
+    .iaVolleyContainer,
+    .beOnTimeContainer,
+    .netflixCopyContainer {
+        flex-direction: column;
+        height: 145vh;
+    }
+
+    .imagesBeOnTime {
+        width: 100%;
+        height: auto;
+        margin-right: 2.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+    .firstContainer {
+        flex-direction: column;
+        align-items: center;
+        height: 145vh;
+    }
+
+    .iaVolleyContainer {
+        flex-direction: column;
+        align-items: center;
+        height: 140vh;
+    }
 
     .beOnTimeContainer,
     .netflixCopyContainer {
         flex-direction: column;
         align-items: center;
-        height: 150vh;
+        height: 145vh;
+    }
+
+                .textBeOnTime {
+                    width: 100%;
+                    margin-bottom: 20px;
+                    height: auto;
+                    margin-left: 0%;
+                    margin-right: 0%;
+                    justify-content: left;
+                }
+        
+                .imagesBeOnTime {
+                    width: 100%;
+                    height: auto;
+                }
+}
+
+@media (max-width: 768px) {
+    .firstContainer {
+        flex-direction: column;
+        align-items: center;
+        height: 140vh;
+    }
+
+           .iaVolleyContainer {
+        flex-direction: column;
+            align-items: center;
+            height: 140vh;
+           }
+
+    .beOnTimeContainer,
+    .netflixCopyContainer {
+        flex-direction: column;
+        align-items: center;
+        height: 135vh;
     }
 
     .textBeOnTime {
         width: 100%;
         margin-bottom: 20px;
         height: auto;
+        margin-left: 0%;
+        margin-right: 0%;
+        justify-content: left;
     }
 
     .imagesBeOnTime {

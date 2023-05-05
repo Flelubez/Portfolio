@@ -1,10 +1,15 @@
 import { useState, useEffect } from "react";
+
 import Swiper from "swiper";
 import "swiper/swiper-bundle.min.css";
+
 import { GiReturnArrow } from "react-icons/gi";
+
 import { Slide } from "react-reveal";
-import styles from "../../styles/descriptions.module.css";
+
 import { FormattedMessage } from "react-intl";
+
+import styles from "../../styles/descriptions.module.css";
 
 function BeOnTimeDescription() {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -19,6 +24,18 @@ function BeOnTimeDescription() {
       handleClick();
     }
   };
+
+    const handleMouseEnter = () => {
+      setIsHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+      setIsHovered(false);
+    };
+
+      const handleClick = () => {
+        setIsFlipped(!isFlipped);
+      };
 
   useEffect(() => {
     const handleResize = () => {
@@ -40,13 +57,7 @@ function BeOnTimeDescription() {
     };
   }, []);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
 
   const containerStyle = {
     fontSize: "125%",
@@ -69,7 +80,6 @@ function BeOnTimeDescription() {
 
   const cardFrontStyle = {
     textAlign: "center",
-    fontSize: "3rem",
     backgroundColor: "#3e5cb6",
     color: "white",
     backfaceVisibility: "hidden",
@@ -82,8 +92,7 @@ function BeOnTimeDescription() {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    boxShadow: "0px 0px 10px 5px rgba(27, 39, 82, 0.5)"
-    
+    boxShadow: "0px 0px 10px 5px rgba(27, 39, 82, 0.5)",
   };
 
   const cardBackStyle = {
@@ -120,23 +129,13 @@ function BeOnTimeDescription() {
   };
 
   const imageStyleFront = {
-    marginTop: "2%",
-    textAlign: "center",
     position: "absolute",
-    zIndex: -1,
+    zIndex: -1
   };
 
   const imageStyleBack = {
-    height: "40%",
-    width: "70%",
-    textAlign: "center",
     position: "absolute",
     zIndex: -1,
-    marginTop: "68%",
-  };
-
-  const handleClick = () => {
-    setIsFlipped(!isFlipped);
   };
 
   return (
@@ -152,12 +151,6 @@ function BeOnTimeDescription() {
             <div className="swiper-slide" style={cardStyle}>
               <div style={cardInnerStyle}>
                 <div className={styles.cardFront} style={cardFrontStyle}>
-                  <img
-                    className={styles.imageFront}
-                    style={imageStyleFront}
-                    src="/18.png"
-                    alt="Soft Skills"
-                  />
                   <div>BeOnTime</div>
                   <div
                     style={buttonStyle}
@@ -166,6 +159,12 @@ function BeOnTimeDescription() {
                   >
                     <GiReturnArrow />
                   </div>
+                  <img
+                    className={styles.imageFront}
+                    style={imageStyleFront}
+                    src="/18.png"
+                    alt="Soft Skills"
+                  />
                 </div>
                 <div style={cardBackStyle} className={styles.cardBack}>
                   <img

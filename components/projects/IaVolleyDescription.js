@@ -69,7 +69,6 @@ function IaVolleyDescription() {
 
   const cardFrontStyle = {
     textAlign: "center",
-    fontSize: "3rem",
     backgroundColor: "#3e5cb6",
     color: "white",
     backfaceVisibility: "hidden",
@@ -118,20 +117,15 @@ function IaVolleyDescription() {
     marginTop: "5%",
   };
 
+
   const imageStyleFront = {
-    marginTop: "2%",
-    textAlign: "center",
     position: "absolute",
     zIndex: -1,
   };
 
   const imageStyleBack = {
-    height: "40%",
-    width: "70%",
-    textAlign: "center",
     position: "absolute",
     zIndex: -1,
-    marginTop: "68%",
   };
 
   const handleClick = () => {

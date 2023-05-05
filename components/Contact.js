@@ -90,7 +90,7 @@ const sendEmail = async (e) => {
   
 
 return (
-  <div>
+  <div className={styles.bigContainer}>
     <div className={styles.title}>
       <div className={styles.titleContent}>
         <Roll down cascade duration={5000}>

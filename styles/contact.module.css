@@ -1,3 +1,9 @@
+.bigContainer {
+    height: auto;
+    width: 100%;
+}
+
+
 .container {
     height: 82vh;
     width: 100%;
@@ -8,6 +14,7 @@
     justify-content: space-between;
     align-items: center;
 }
+
 
 .Toast {
     font-size: 3rem;
@@ -34,7 +41,6 @@
 .titleContent {
     padding-top: 15rem;
     padding-left: 20%;
-    /* Décaler le contenu de 20% depuis la gauche */
 }
 
 .form {
@@ -42,8 +48,6 @@
     flex-direction: column;
     gap: 1.5rem;
     width: 35%;
-    
-    /* Augmenter la largeur des champs de saisie */
     font-size: 1.5rem;
     margin-left: 2rem;
     margin-right: 2rem;
@@ -67,7 +71,6 @@
     outline: none;
     transition: background-color 0.3s ease;
     width: 100%;
-    /* Remplir l'espace disponible */
 }
 
 .input:hover,
@@ -89,6 +92,15 @@
 
 .button:hover {
     background-color: #ff6e6e;
+}
+
+@media screen and (max-width: 1100px) {
+.titleContent {
+        padding-top: 15rem;
+        justify-content: center;
+        padding-left:  10%;
+        /* Décaler le contenu de 20% depuis la gauche */
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -117,11 +129,8 @@
 
     .titleContent {
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 4rem;
-    padding-top: 4rem;
+    padding-top: 10%;
 }
 
 .contactLetter{

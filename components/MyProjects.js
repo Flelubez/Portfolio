@@ -73,7 +73,7 @@ function MyProjects() {
           </>
         )}
       </div>
-      <div className={styles.netflixCopyContainer}>
+      <div className={styles.firstContainer}>
         <div
           className={`${styles.textBeOnTime} ${styles.descriptionContainer}`}
         >
@@ -103,7 +103,7 @@ function MyProjects() {
           <Hearthstone />
         </div>
       </div>
-      <div id="my-projects4" className={styles.beOnTimeContainer}>
+      <div id="my-projects4" className={styles.iaVolleyContainer}>
         <div
           className={`${styles.textBeOnTime} ${styles.descriptionContainer}`}
         >

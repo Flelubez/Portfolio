@@ -79,7 +79,7 @@
     font-size: 400%;
     color: rgb(42, 42, 42);
     opacity: 0;
-        animation: fadeIn 3s ease-in-out forwards;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .p {
@@ -91,11 +91,13 @@
 
 .title {
     font-size: 4rem;
+    animation: fadeIn 1s ease-in-out forwards;
+    text-align: center;
 }
 
 @keyframes fadeIn {
     from {
-        opacity: 0;
+        opacity: 0.5;
     }
 
     to {

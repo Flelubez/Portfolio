@@ -18,6 +18,7 @@
     position: relative;
     width: 56.25%;
     padding-top: 56.25%;
+    margin-bottom: 5%;
     /* 16:9 Aspect Ratio a1d5e8*/
     background: radial-gradient(circle at center, #1b1e1e 20%, #a1d5e8 20%, #000000 70%);
     border-radius: 10px;
@@ -68,12 +69,39 @@
         color: rgb(212, 223, 253)
 }
 
+/* Ajout d'une règle de média pour les écrans de moins de 1200px */
+@media screen and (max-width: 1200px) {
+    .container {
+            flex-direction: column;
+    }
+
+    .skills {
+        color: white;
+        font-size: 450%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-right: 0rem;
+        transition: transform 0.5s ease-in-out;
+    }
+            
+    .gradientBg {
+        width: 75%;
+        padding-top: 75%;
+    }
+}
+
+/* Ajout d'une règle de média pour les écrans de moins de 992px */
+@media screen and (max-width: 992px) {
+    .gradientBg {
+        width: 85%;
+        padding-top: 85%;
+    }
+}
+
+
 @media screen and (max-width: 768px) {
 
     /* Ajout d'une règle de média pour les écrans de moins de 768px */
-    .container {
-        flex-direction: column;
-    }
+
         .skills {
 text-align: center;
 margin-right: 0rem;
@@ -93,4 +121,12 @@ margin-bottom: 5rem;
     width: 90%;
     padding-top: 90%;
 }
+}
+
+/* Ajout d'une règle de média pour les écrans de moins de 576px */
+@media screen and (max-width: 576px) {
+    .gradientBg {
+        width: 100%;
+        padding-top: 100%;
+    }
 }

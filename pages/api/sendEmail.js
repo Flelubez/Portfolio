@@ -23,15 +23,16 @@ export default async function handler(req, res) {
   const mailOptions = {
     from: email,
     to: "florent.lelubez@gmail.com",
-    subject: `Nouveau message de ${name}`,
-    text: `email : ${email} message:${message}`
+    subject: `Nouveau message de ${name}, ${email}`,
+    text: `email : ${email}
+          message:${message}`,
   };
 
   try {
     await transporter.sendMail(mailOptions);
-    res.status(200).json({ message: "Email envoyé" });
+    res.status(200).json({ message: "Mail sent" });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: "Erreur lors de l'envoi de l'email" });
+    res.status(500).json({ message: "Error went sending mail" });
   }
 }

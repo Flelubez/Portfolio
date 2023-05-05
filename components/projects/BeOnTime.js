@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+
 import SwiperCore, { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
-import { Slide, Zoom, Flip, Bounce, Rotate, Fade, Roll } from "react-reveal";
+
+import { Slide } from "react-reveal";
+
 import styles from "../../styles/descriptions.module.css"; 
 
 SwiperCore.use([Pagination]);
@@ -10,6 +13,8 @@ SwiperCore.use([Pagination]);
 const BeOnTime = () => {
   const [screenWidth, setScreenWidth] = useState(null);
 
+
+  //resize event listener
   useEffect(() => {
     if (typeof window !== "undefined") {
       setScreenWidth(window.innerWidth);
@@ -25,29 +30,30 @@ const BeOnTime = () => {
     }
   }, []);
 
-  const imgStyle = {
-    width: "100%",
-    height: "auto",
-    maxHeight: "85vh",
-    maxWidth: "120vh",
-    marginTop: "50px",
-    marginLeft: "100px",
-    marginBottom: "5vh",
-    ...(screenWidth !== null &&
-      screenWidth < 768 && {
-        width: "95%",
-        marginLeft: "10px",
-      }),
-  };
+ const imgStyle = {
+   width: "100%",
+   height: "auto",
+   border: "3px solid white",
+   maxHeight: "85vh",
+   maxWidth: "120vh",
+   marginTop: "50px",
+   marginBottom: "5vh",
+   borderRadius: "1rem",
+   ...(screenWidth !== null &&
+     screenWidth < 768 && {
+       width: "95%",
+       marginLeft: "10px",
+     }),
+ };
 
   const imgBigStyle = {
     width: "100%",
     height: "auto",
-    maxHeight: "85vh",
+    maxHeight: "75vh",
     maxWidth: "120vh",
     marginTop: "0.5vh",
-    marginBottom: "5vh",
-    marginLeft: "100px",
+    marginBottom: "6.8vh",
+    borderRadius: "1rem",
     ...(screenWidth !== null &&
       screenWidth < 768 && {
         width: "95%",
@@ -55,22 +61,26 @@ const BeOnTime = () => {
       }),
   };
 
-    const imgMegaStyle = {
-      width: "100%",
-      height: "auto",
-      maxHeight: "82vh",
-      maxWidth: "130vh",
-      marginTop: "0.5vh",
-      marginBottom: "2.8vh",
-      marginTop: "4vh",
-      marginLeft: "80px",
-      ...(screenWidth !== null &&
-        screenWidth < 768 && {
-          width: "95%",
-          marginLeft: "10px",
-        }),
-    };
 
+ const imgMegaStyle = {
+   width: "100%",
+   height: "auto",
+   border: "3px solid white",
+   maxHeight: "71vh",
+   maxWidth: "100vh",
+   marginTop: "0.5vh",
+   marginBottom: "2.8vh",
+   marginTop: "4vh",
+   borderRadius: "1rem",
+   ...(screenWidth !== null &&
+     screenWidth < 768 && {
+       width: "95%",
+       marginLeft: "10px",
+     }),
+ };
+
+
+//Allow setting of bullets and bullets when active
 const renderBullet = (index, className) => {
   let bulletClassName = `${className} ${styles.bullet2}`;
   if (typeof swiper !== "undefined" && index === swiper.realIndex) {
@@ -80,46 +90,49 @@ const renderBullet = (index, className) => {
 };
 
   return (
-    <Slide right duration={2000}>
-      <Swiper
-        pagination={{
-          clickable: true,
-          el: ".swiper-pagination",
-          bulletClass: "swiper-pagination-bullet",
-          bulletActiveClass: "swiper-pagination-bullet-active",
-          renderBullet,
-        }}
-      >
-        <SwiperSlide>
-          <img src="/BeOnTime1.png" alt="Image 1" style={imgMegaStyle} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/BeOnTime8.png" alt="Image 2" style={imgMegaStyle} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/BeOnTime2.png" alt="Image 3" style={imgMegaStyle} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/BeOnTime3.png" alt="Image 4" style={imgMegaStyle} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/BeOnTime4.png" alt="Image 5" style={imgMegaStyle} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/BeOnTime7.png" alt="Image 6" style={imgMegaStyle} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/BeOnTime5.png" alt="Image 7" style={imgBigStyle} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/BeOnTime6.png" alt="Image 8" style={imgBigStyle} />
-        </SwiperSlide>
-        <div
-          className="swiper-pagination"
-          style={{ position: "absolute", bottom: "0px" }}
-        ></div>
-      </Swiper>
-    </Slide>
+    <div className={styles.containerRight}>
+      <Slide right duration={2000}>
+        <Swiper
+          spaceBetween={300}
+          pagination={{
+            clickable: true,
+            el: ".swiper-pagination",
+            bulletClass: "swiper-pagination-bullet",
+            bulletActiveClass: "swiper-pagination-bullet-active",
+            renderBullet,
+          }}
+        >
+          <SwiperSlide>
+            <img src="/BeOnTime1.png" alt="Image 1" style={imgMegaStyle} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="/BeOnTime8.png" alt="Image 2" style={imgMegaStyle} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="/BeOnTime2.png" alt="Image 3" style={imgMegaStyle} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="/BeOnTime3.png" alt="Image 4" style={imgMegaStyle} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="/BeOnTime4.png" alt="Image 5" style={imgMegaStyle} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="/BeOnTime7.png" alt="Image 6" style={imgMegaStyle} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="/BeOnTime5.png" alt="Image 7" style={imgBigStyle} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="/BeOnTime6.png" alt="Image 8" style={imgBigStyle} />
+          </SwiperSlide>
+          <div
+            className="swiper-pagination"
+            style={{ position: "absolute", bottom: "0px" }}
+          ></div>
+        </Swiper>
+      </Slide>
+    </div>
   );
 };
 

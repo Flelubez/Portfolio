@@ -1,55 +1,150 @@
 .container {
     font-size: 2.5rem;
+    position: relative;
+    /* Ajoutez la position relative au container parent */
 }
 
+.containerRight {
+    padding-left: 10%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
 
 .cardBack {
-    width: 30vw;
+    width: 100%;
     height: 70vh;
-    font-size: 2rem;
+    font-size: 160%;
 }
 
 .cardFront {
-    width: 30vw;
+    width: 100%;
     height: 70vh;
-    font-size: 2rem;
+    font-size: 3rem;
+    margin-left: 1.2rem;
 }
 
 .imageFront {
+    position: absolute;
+    left: 0;
+    /* Définit la position horizontale de l'image à gauche */
+    bottom: 0;
+    /* Définit la position verticale de l'image en bas */
     height: 70%;
     width: 98%;
-    margin-bottom: -32%;
+    border-radius: 1rem;
 }
 
 .imageBack {
-    height: "40%";
-    width: "70%";
+    position: absolute;
+    left: 0;
+    /* Définit la position horizontale de l'image à gauche */
+    bottom: 0;
+    /* Définit la position verticale de l'image en bas */
+    height: 40%;
+    width: 70%;
+        border-radius: 1rem;
 }
 
+
+@media (max-width: 1450px) {
+    .containerRight {
+        padding-left: 15%;
+        margin-right: 2%;
+        margin-left: 2%;
+        }
+
+    .cardBack {
+        font-size: 1.5rem;;
+        line-height: 2rem;
+        width: 240%;
+        height: 55vh;
+        margin-right: 20%;
+    }
+
+    .cardFront {
+        width: 80%;
+        font-size: 2rem;
+        line-height: 2rem;
+        width: 240%;
+        height: 55vh;
+        margin-left: 40%;
+    }
+}
+
+@media (max-width: 1150px) {
+    .containerRight {
+        padding-left: 0%;
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+
+    .cardBack {
+        font-size: 1.5rem;
+        padding-right: 2rem;
+        width: 80%;
+        height: 55vh;
+        margin-left: 5%;
+        margin-right: 2%;
+    }
+
+    .cardFront {
+        width: 80%;
+        font-size: 2.5rem;
+        line-height: 2rem;
+        width: 80%;
+        height: 55vh;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 1150px) {
+.containerRight {
+        padding-left: 0%;
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+    .cardBack {
+        font-size: 1.5rem;
+        padding-right: 2rem;
+        width: 80%;
+        height: 55vh;
+        margin-left: 5%;
+        margin-right: 2%;
+    }
+
+          .cardFront {
+              width: 80%;
+              font-size: 2.5rem;
+              line-height: 2rem;
+              width: 80%;
+              height: 55vh;
+            margin-left: 5%;
+            margin-right: 5%;
+          }
+}
+
+
 @media (max-width: 767px) {
+
+    .containerRight {
+            padding-left: 0%;
+            margin-right: 0rem;
+            margin-left: 0rem;
+        }
 
     .cardBack {
             width: 80%;
             font-size: 1.5rem;
             line-height: 2rem;
-            
+            margin-right: -7%;
     }
 
     .cardFront {
              width: 80%;
              font-size: 3rem;
              line-height: 2rem;
-    }
-
-    .imageFront {
-    margin-top: "80%";
-    margin-bottom: -35%;
-    }
-
-    .imageBack {
-    margin-bottom: -7vh;
-    height : 40%;
-    width: "70%";
+             margin-left: 0%;
     }
 }
 
@@ -66,7 +161,7 @@
     background-color: rgb(255, 87, 87);
 }
 
-.bulletActive {
+/* .bulletActive {
     width: 40px;
     height: 40px;
     background-color: rgb(115, 110, 216);
@@ -78,4 +173,4 @@
     width: 40px;
     height: 40px;
     background-color: red;
-}
+} */
