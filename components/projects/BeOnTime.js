@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import SwiperCore, { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -89,51 +89,77 @@ const renderBullet = (index, className) => {
   return `<span class="${bulletClassName}"></span>`;
 };
 
-  return (
-    <div className={styles.containerRight}>
-      <Slide right duration={2000}>
-        <Swiper
-          spaceBetween={300}
-          pagination={{
-            clickable: true,
-            el: ".swiper-pagination",
-            bulletClass: "swiper-pagination-bullet",
-            bulletActiveClass: "swiper-pagination-bullet-active",
-            renderBullet,
-          }}
-        >
-          <SwiperSlide>
-            <img src="/BeOnTime1.png" alt="Image 1" style={imgMegaStyle} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/BeOnTime8.png" alt="Image 2" style={imgMegaStyle} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/BeOnTime2.png" alt="Image 3" style={imgMegaStyle} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/BeOnTime3.png" alt="Image 4" style={imgMegaStyle} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/BeOnTime4.png" alt="Image 5" style={imgMegaStyle} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/BeOnTime7.png" alt="Image 6" style={imgMegaStyle} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/BeOnTime5.png" alt="Image 7" style={imgBigStyle} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/BeOnTime6.png" alt="Image 8" style={imgBigStyle} />
-          </SwiperSlide>
-          <div
-            className="swiper-pagination"
-            style={{ position: "absolute", bottom: "0px" }}
-          ></div>
-        </Swiper>
-      </Slide>
-    </div>
-  );
+ const swiperRef = useRef(null); // Ajout d'un useRef pour accéder à l'instance du Swiper
+
+ // ...
+
+ // Méthode pour gérer les événements du clavier
+ const handleKeyDown = (event) => {
+   if (event.key === "ArrowLeft") {
+     swiperRef.current.swiper.slidePrev(); // Naviguer vers la gauche
+   } else if (event.key === "ArrowRight") {
+     swiperRef.current.swiper.slideNext(); // Naviguer vers la droite
+   }
+ };
+
+ // Ajouter un écouteur d'événement pour les touches du clavier
+ useEffect(() => {
+   window.addEventListener("keydown", handleKeyDown);
+   return () => {
+     window.removeEventListener("keydown", handleKeyDown);
+   };
+ }, []);
+
+ // ...
+
+ return (
+   <div className={styles.containerRight} tabIndex="0">
+     {" "}
+     {/* Ajout de tabIndex="0" */}
+     <Slide right duration={2000}>
+       <Swiper
+         ref={swiperRef} // Utilisation du useRef pour accéder à l'instance Swiper
+         spaceBetween={300}
+         pagination={{
+           clickable: true,
+           el: ".swiper-pagination",
+           bulletClass: "swiper-pagination-bullet",
+           bulletActiveClass: "swiper-pagination-bullet-active",
+           renderBullet,
+         }}
+       >
+         <SwiperSlide>
+           <img src="/BeOnTime1.png" alt="Image 1" style={imgMegaStyle} />
+         </SwiperSlide>
+         <SwiperSlide>
+           <img src="/BeOnTime8.png" alt="Image 2" style={imgMegaStyle} />
+         </SwiperSlide>
+         <SwiperSlide>
+           <img src="/BeOnTime2.png" alt="Image 3" style={imgMegaStyle} />
+         </SwiperSlide>
+         <SwiperSlide>
+           <img src="/BeOnTime3.png" alt="Image 4" style={imgMegaStyle} />
+         </SwiperSlide>
+         <SwiperSlide>
+           <img src="/BeOnTime4.png" alt="Image 5" style={imgMegaStyle} />
+         </SwiperSlide>
+         <SwiperSlide>
+           <img src="/BeOnTime7.png" alt="Image 6" style={imgMegaStyle} />
+         </SwiperSlide>
+         <SwiperSlide>
+           <img src="/BeOnTime5.png" alt="Image 7" style={imgBigStyle} />
+         </SwiperSlide>
+         <SwiperSlide>
+           <img src="/BeOnTime6.png" alt="Image 8" style={imgBigStyle} />
+         </SwiperSlide>
+         <div
+           className="swiper-pagination"
+           style={{ position: "absolute", bottom: "0px" }}
+         ></div>
+       </Swiper>
+     </Slide>
+   </div>
+ );
 };
 
 export default BeOnTime;

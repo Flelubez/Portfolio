@@ -80,6 +80,7 @@
 
 .button {
     background-color: #ff5252;
+    width: 103%;
     color: white;
     border: none;
     border-radius: 0.5rem;
@@ -94,6 +95,14 @@
     background-color: #ff6e6e;
 }
 
+.contactInfo {
+    width: 45%;
+    font-size: 200%;
+    /* background-color: red; */
+    margin-right: 5rem;
+    padding-top: 6rem;
+}
+
 @media screen and (max-width: 1100px) {
 .titleContent {
         padding-top: 15rem;
@@ -101,10 +110,21 @@
         padding-left:  10%;
         /* Décaler le contenu de 20% depuis la gauche */
     }
+
+        .button {
+            width: 105%;
+        }
 }
 
 @media screen and (max-width: 768px) {
-
+.contactInfo {
+        width: 80%;
+        height: auto;
+        margin-right: 5rem;
+        margin-left: 5rem;
+        text-align: center;
+        padding-top: 2rem;
+    }
     
     .Toast {
         font-size: 1.5rem !important;
@@ -130,20 +150,17 @@
     .titleContent {
     color: white;
     font-size: 4rem;
-    padding-top: 10%;
+    padding-bottom: 25%;
 }
 
 .contactLetter{
     font-size: 5.5rem;
 }
+
+.button {
+    width: 110%;
 }
 
-.contactInfo {
-    width: 45%;
-    font-size: 2rem;
-    /* background-color: red; */
-    margin-right: 5rem;
-    padding-bottom: 10rem;
 }
 
 .contactInfo div {

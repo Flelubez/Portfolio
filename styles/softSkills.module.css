@@ -69,6 +69,26 @@
         color: rgb(212, 223, 253)
 }
 
+/* Ajout d'une règle de média pour les écrans de moins de 1400px */
+@media screen and (max-width: 1400px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .skills {
+        color: white;
+        font-size: 450%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-right: 0rem;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .gradientBg {
+        width: 75%;
+        padding-top: 75%;
+    }
+}
+
 /* Ajout d'une règle de média pour les écrans de moins de 1200px */
 @media screen and (max-width: 1200px) {
     .container {

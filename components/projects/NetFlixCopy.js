@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import SwiperCore, { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -105,65 +105,91 @@ const NetFlixCopy = () => {
     return `<span class="${bulletClassName}"></span>`;
   };
 
-  return (
-    <div className={styles.containerRight}>
-      <Slide right duration={2000}>
-        <Swiper
-          spaceBetween={300}
-          pagination={{
-            clickable: true,
-            el: ".swiper-pagination",
-            bulletClass: "swiper-pagination-bullet",
-            bulletActiveClass: "swiper-pagination-bullet-active",
-            renderBullet,
-          }}
-        >
-          <SwiperSlide>
-            <img
-              src="/NetflixCopy1.png"
-              alt=" NetflixCopy 1"
-              style={imgMegaStyle}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/NetflixCopy2.png" alt="NetflixCopy 2" style={imgStyle} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src="/NetflixCopy3.png"
-              alt="NetflixCopy 3"
-              style={imgMegaStyle}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src="/NetflixCopy4.png"
-              alt="NetflixCopy1 4"
-              style={imgBigStyle}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src="/NetflixCopy6.png"
-              alt="NetflixCopy1 5"
-              style={imgUniqueStyle}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src="/NetflixCopy5.png"
-              alt="NetflixCopy 6"
-              style={imgBigStyle}
-            />
-          </SwiperSlide>
-          <div
-            className="swiper-pagination"
-            style={{ position: "absolute", bottom: "18px" }}
-          ></div>
-        </Swiper>
-      </Slide>
-    </div>
-  );
+ const swiperRef = useRef(null); // Ajout d'un useRef pour accéder à l'instance du Swiper
+
+ // ...
+
+ // Méthode pour gérer les événements du clavier
+ const handleKeyDown = (event) => {
+   if (event.key === "ArrowLeft") {
+     swiperRef.current.swiper.slidePrev(); // Naviguer vers la gauche
+   } else if (event.key === "ArrowRight") {
+     swiperRef.current.swiper.slideNext(); // Naviguer vers la droite
+   }
+ };
+
+ // Ajouter un écouteur d'événement pour les touches du clavier
+ useEffect(() => {
+   window.addEventListener("keydown", handleKeyDown);
+   return () => {
+     window.removeEventListener("keydown", handleKeyDown);
+   };
+ }, []);
+
+ // ...
+
+ return (
+   <div className={styles.containerRight} tabIndex="0">
+     {" "}
+     {/* Ajout de tabIndex="0" */}
+     <Slide right duration={2000}>
+       <Swiper
+         ref={swiperRef} // Utilisation du useRef pour accéder à l'instance Swiper
+         spaceBetween={300}
+         pagination={{
+           clickable: true,
+           el: ".swiper-pagination",
+           bulletClass: "swiper-pagination-bullet",
+           bulletActiveClass: "swiper-pagination-bullet-active",
+           renderBullet,
+         }}
+       >
+         <SwiperSlide>
+           <img
+             src="/NetflixCopy1.png"
+             alt=" NetflixCopy 1"
+             style={imgMegaStyle}
+           />
+         </SwiperSlide>
+         <SwiperSlide>
+           <img src="/NetflixCopy2.png" alt="NetflixCopy 2" style={imgStyle} />
+         </SwiperSlide>
+         <SwiperSlide>
+           <img
+             src="/NetflixCopy3.png"
+             alt="NetflixCopy 3"
+             style={imgMegaStyle}
+           />
+         </SwiperSlide>
+         <SwiperSlide>
+           <img
+             src="/NetflixCopy4.png"
+             alt="NetflixCopy1 4"
+             style={imgBigStyle}
+           />
+         </SwiperSlide>
+         <SwiperSlide>
+           <img
+             src="/NetflixCopy6.png"
+             alt="NetflixCopy1 5"
+             style={imgUniqueStyle}
+           />
+         </SwiperSlide>
+         <SwiperSlide>
+           <img
+             src="/NetflixCopy5.png"
+             alt="NetflixCopy 6"
+             style={imgBigStyle}
+           />
+         </SwiperSlide>
+         <div
+           className="swiper-pagination"
+           style={{ position: "absolute", bottom: "18px" }}
+         ></div>
+       </Swiper>
+     </Slide>
+   </div>
+ );
 };
 
 export default NetFlixCopy;

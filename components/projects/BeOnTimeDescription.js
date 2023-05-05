@@ -111,11 +111,6 @@ function BeOnTimeDescription() {
     justifyContent: "center",
     lineHeight: "3rem",
     boxShadow: "0px 0px 10px 5px rgba(27, 39, 82, 0.5)",
-    ...(screenWidth < 768 && {
-      width: "80%",
-      fontSize: "1.5rem",
-      lineHeight: "2rem",
-    }),
   };
 
   const buttonStyle = {

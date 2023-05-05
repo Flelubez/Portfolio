@@ -55,75 +55,66 @@
 
     .cardBack {
         font-size: 1.5rem;;
-        line-height: 2rem;
-        width: 240%;
-        height: 55vh;
-        margin-right: 20%;
+        line-height: 6rem;
+        width: 120%;
+        height: 70vh;
+        margin-right: 95%;
     }
 
     .cardFront {
-        width: 80%;
         font-size: 2rem;
         line-height: 2rem;
-        width: 240%;
-        height: 55vh;
-        margin-left: 40%;
-    }
-}
-
-@media (max-width: 1150px) {
-    .containerRight {
-        padding-left: 0%;
-        margin-right: 2%;
-        margin-left: 2%;
-    }
-
-    .cardBack {
-        font-size: 1.5rem;
-        padding-right: 2rem;
-        width: 80%;
-        height: 55vh;
-        margin-left: 5%;
-        margin-right: 2%;
-    }
-
-    .cardFront {
-        width: 80%;
-        font-size: 2.5rem;
-        line-height: 2rem;
-        width: 80%;
-        height: 55vh;
-        margin-left: 5%;
-        margin-right: 5%;
+        width: 120%;
+        height: 70vh;
+        margin-left: 100%;
     }
 }
 
 @media (max-width: 1150px) {
 .containerRight {
-        padding-left: 0%;
+        padding-left: 15%;
         margin-right: 2%;
         margin-left: 2%;
     }
-    .cardBack {
-        font-size: 1.5rem;
-        padding-right: 2rem;
-        width: 80%;
-        height: 55vh;
-        margin-left: 5%;
-        margin-right: 2%;
-    }
 
-          .cardFront {
-              width: 80%;
-              font-size: 2.5rem;
-              line-height: 2rem;
-              width: 80%;
-              height: 55vh;
-            margin-left: 5%;
-            margin-right: 5%;
-          }
+    .cardBack {
+        font-size: 1.3rem;   
+        line-height: 2rem;
+        width: 120%;
+        height: 70vh;
+        margin-right: 95%;
+    }
+        .cardFront {
+        font-size: 2rem;
+        line-height: 2rem;
+        width: 120%;
+        height: 70vh;
+        margin-left: 100%;
+        }
 }
 
+@media (max-width: 900px) {
+
+    .containerRight {
+        padding-left: 0%;
+        margin-right: 0rem;
+        margin-left: 0rem;
+    }
+
+    .cardBack {
+        width: 160%;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        margin-right: 60%;
+    }
+
+    .cardFront {
+        width: 160%;
+        font-size: 3rem;
+        line-height: 2rem;
+        margin-left: 0%;
+    }
+}
 
 @media (max-width: 767px) {
 
@@ -138,6 +129,7 @@
             font-size: 1.5rem;
             line-height: 2rem;
             margin-right: -7%;
+
     }
 
     .cardFront {
