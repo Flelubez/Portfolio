@@ -35,6 +35,7 @@
     height: 82.6vh;
     /* background-color: rgb(24, 138, 81); */
     color: black;
+    min-height: 82.6vh;
 }
 
 .beOnTimeContainer {
