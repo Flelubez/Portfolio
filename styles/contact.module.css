@@ -5,7 +5,7 @@
 
 
 .container {
-    height: 82vh;
+    height: 72vh;
     width: 100%;
     background-color: #1c2331;
     color: white;
@@ -16,7 +16,7 @@
 }
 
 .containerLight {
-    height: 82vh;
+    height: 72vh;
     width: 100%;
     background-color: #5c86a4;
     color: black;

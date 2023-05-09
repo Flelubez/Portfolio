@@ -5,10 +5,12 @@ import MyProjects from "@/components/MyProjects";
 import LandingOnSite from "@/components/LandingOnSite";
 import SoftSkills from "./SoftSkills";
 import Contact from "./Contact";
+import Footer from "./Footer";
 import styles from "../styles/main.module.css";
 import { Element, scroller } from "react-scroll";
 import { Slide, Zoom, Flip, Bounce, Rotate, Fade, Roll } from "react-reveal";
 import { useSelector } from "react-redux";
+
 
 function Main() {
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
@@ -120,6 +122,9 @@ return (
       </section>
       <section name="contact" id="contact">
         <Contact />
+      </section>
+      <section>
+        <Footer />
       </section>
     </div>
   </div>
