@@ -167,7 +167,7 @@ function IaVolleyDescription() {
                     alt="Soft Skills"
                   />
 
-                  <div style={{ textAlign: "left", marginLeft: "50px" }}>
+                  <div style={{ textAlign: "left"}}>
                     <FormattedMessage
                       id="iaVolleyDescription"
                       defaultMessage="IaVolley, my fourth project, allowed me to explore artificial intelligence through the Brain.js library. The interface, connected to a backend and a database, enables the addition and utilization of data processed by the neural network to predict victories and defeats based on observed statistics."

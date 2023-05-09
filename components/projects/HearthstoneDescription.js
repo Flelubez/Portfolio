@@ -167,7 +167,7 @@ function HearthstoneDescription() {
                     src="/18.png"
                     alt="Soft Skills"
                   />
-                  <div style={{ textAlign: "left", marginLeft: "50px" }}>
+                  <div style={{ textAlign: "left"}}>
                     <FormattedMessage
                       id="HearthstoneDescription"
                       defaultMessage=" IaVolley, mon quatrième projet, m'a permis d'explorer

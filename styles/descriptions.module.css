@@ -126,9 +126,9 @@
 
     .cardBack {
             width: 80%;
-            font-size: 1rem;
+            font-size: 4vw;
             line-height: 2rem;
-            margin-right: -7%;
+            margin-right: -1%;
             padding-right: 3%;
 
     }
@@ -138,6 +138,32 @@
              font-size: 2.7rem;
              line-height: 3.5rem;
              margin-left: -3%;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .containerRight {
+        padding-left: 0%;
+        margin-right: 0rem;
+        margin-left: 0rem;
+    }
+
+    .cardBack {
+        width: 80%;
+        font-size: 4vw;
+        line-height: 2rem;
+        margin-right: -18%;
+        padding-right: 3%;
+        padding-left: 7%;
+
+    }
+
+    .cardFront {
+        width: 80%;
+        font-size: 2.7rem;
+        line-height: 3.5rem;
+        margin-left: -8%;
     }
 }
 
