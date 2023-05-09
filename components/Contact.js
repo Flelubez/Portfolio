@@ -154,7 +154,11 @@ return (
             />
           </div>
 
-          <button type="submit" className={darkMode ? styles.button : styles.buttonLight} onClick={sendEmail}>
+          <button
+            type="submit"
+            className={darkMode ? styles.button : styles.buttonLight}
+            onClick={sendEmail}
+          >
             <Roll right duration={3000}>
               <FormattedMessage id="submit" defaultMessage="Submit" />
             </Roll>
@@ -231,7 +235,7 @@ return (
               alt="Phone logo"
               className={styles.phoneIcon}
             />
-            <div className={styles.phone}>+33676830895</div>
+            <div className={styles.phone2}>+33676830895</div>
           </Rotate>
         </div>
         <a
@@ -246,7 +250,13 @@ return (
               <div>
                 <MdContactMail className={styles.resumeIcon} />
               </div>
-              <div>
+              <div
+                className={
+                  darkMode
+                    ? styles.linkedinDescription
+                    : styles.linkedinDescriptionLight
+                }
+              >
                 {" "}
                 <FormattedMessage id="resume" defaultMessage="Resume" />
               </div>
