@@ -9,12 +9,14 @@ import Contact from "./Contact";
 import styles from "../styles/main.module.css";
 import { Element, scroller } from "react-scroll";
 import { Slide, Zoom, Flip, Bounce, Rotate, Fade, Roll } from "react-reveal";
+import { useSelector } from "react-redux";
 
 
 
 function Main() {
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [lastScrollTime, setLastScrollTime] = useState(0);
+   const darkMode = useSelector((state) => state.theme.darkMode);
 
   //handleResize + useEffect qui suit permet d'avoir la taille de l'écran en direct
     const handleResize = () => {
@@ -38,7 +40,7 @@ function Main() {
 
   const sections = [
     { id: "landing", offset: 0 },
-    { id: "about-me", offset: -84 },
+    { id: "about-me", offset: -75 },
     { id: "skills", offset: -75 },
     { id: "my-projects", offset: -66 },
     { id: "my-projects2", offset: -80 },
@@ -100,28 +102,28 @@ const handleScroll = (e) => {
   }, [currentStepIndex]);
 
 return (
-  <div className={styles.container}>
+  <div className={darkMode ? styles.container : styles.containerLight}>
     <div>
       <NavBar updateSectionIndex={updateSectionIndex} />
     </div>
     <div>
-      <Element name="landing" id="landing">
+      <section name="landing" id="landing">
         <Slide left duration={2000}>
           <LandingOnSite />
         </Slide>
-      </Element>
-      <Element name="about-me" id="about-me">
+      </section>
+      <section name="about-me" id="about-me">
         <Header />
-      </Element>
-      <Element name="skills" id="skills">
+      </section>
+      <section name="skills" id="skills">
         <SoftSkills />
-      </Element>
-      <Element name="my-projects" id="my-projects">
+      </section>
+      <section name="my-projects" id="my-projects">
         <MyProjects />
-      </Element>
-      <Element name="contact" id="contact">
+      </section>
+      <section name="contact" id="contact">
         <Contact />
-      </Element>
+      </section>
     </div>
   </div>
 );

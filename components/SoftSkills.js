@@ -2,11 +2,13 @@ import React from "react";
 import { FormattedMessage } from "react-intl";
 import styles from "../styles/softSkills.module.css";
 import { Slide, Zoom, Flip, Bounce, Rotate, Fade, Roll } from "react-reveal";
+import { useSelector } from "react-redux";
 
 function SoftSkills() {
+ const darkMode = useSelector((state) => state.theme.darkMode);
 
   return (
-    <div className={styles.bigcontainer}>
+    <div className={darkMode ? styles.bigcontainer : styles.bigcontainerLight}>
       <div className={styles.container}>
         <Roll top cascade duration={4000}>
           <div className={styles.skills}>
@@ -16,7 +18,7 @@ function SoftSkills() {
           </div>
         </Roll>
         <Zoom Top duration={4000}>
-          <div className={styles.gradientBg}>
+          <div className={darkMode? styles.gradientBg : styles.gradientBgLight}>
             <img
               className={styles.softSkillsImage}
               src="/CloudBgTransparent.png"

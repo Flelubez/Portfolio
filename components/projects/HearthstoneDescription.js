@@ -76,7 +76,7 @@ function HearthstoneDescription() {
     top: 40,
     left: 30,
     zIndex: 1,
-    border: "2px solid grey",
+    border: "1px solid grey",
     borderRadius: "10px",
     display: "flex",
     flexDirection: "column",
@@ -85,7 +85,7 @@ function HearthstoneDescription() {
   };
 
   const cardBackStyle = {
-    border: "2px solid grey",
+    border: "1px solid grey",
     textAlign: "center",
     backgroundColor: "rgb(33, 31, 31)",
     color: "white",
@@ -138,7 +138,6 @@ function HearthstoneDescription() {
       <div
         onClick={handleClick}
         onKeyDown={(e) => handleKeyDown(e, "#my-projects")}
-        tabIndex={0}
         style={containerStyle}
       >
         <div className="swiper-container">
@@ -152,7 +151,7 @@ function HearthstoneDescription() {
                     src="/18.png"
                     alt="Soft Skills"
                   />
-                  <div>Hearthstone Filter</div>
+                  <div tabIndex={0}>Hearthstone Filter</div>
                   <div
                     style={buttonStyle}
                     onMouseEnter={handleMouseEnter}

@@ -87,7 +87,7 @@ function BeOnTimeDescription() {
     top: 40,
     left: 30,
     zIndex: 1,
-    border: "2px solid grey",
+    border: "1px solid grey",
     borderRadius: "10px",
     display: "flex",
     flexDirection: "column",
@@ -96,7 +96,7 @@ function BeOnTimeDescription() {
   };
 
   const cardBackStyle = {
-    border: "2px solid grey",
+    border: "1px solid grey",
     textAlign: "center",
     backgroundColor: "#3e5cb6",
     color: "white",
@@ -138,7 +138,6 @@ function BeOnTimeDescription() {
       <div
         onClick={handleClick}
         onKeyDown={(e) => handleKeyDown(e, "#my-projects")}
-        tabIndex={0}
         style={containerStyle}
       >
         <div className="swiper-container">
@@ -146,7 +145,7 @@ function BeOnTimeDescription() {
             <div className="swiper-slide" style={cardStyle}>
               <div style={cardInnerStyle}>
                 <div className={styles.cardFront} style={cardFrontStyle}>
-                  <div>BeOnTime</div>
+                  <div tabIndex={0}>BeOnTime</div>
                   <div
                     style={buttonStyle}
                     onMouseEnter={handleMouseEnter}

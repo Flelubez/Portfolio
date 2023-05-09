@@ -21,8 +21,26 @@
     color: white;
 }
 
+.myProjectsLight {
+    font-size: 4rem;
+    background-color: #4169E1;
+    width: 100%;
+    height: 6rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
 .myProjects .letter {
     animation: bounce-in-top 0.8s ease-out;
+    animation-iteration-count: 2;
+    display: inline-block;
+}
+
+.myProjectsLight .letter {
+    animation: bounce-in-topLight 0.8s ease-out;
     animation-iteration-count: 2;
     display: inline-block;
 }
@@ -48,6 +66,16 @@
     color: white;
 }
 
+.beOnTimeContainerLight {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 92vh;
+    background-color: #464646;
+    color: white;
+}
+
 .netflixCopyContainer {
     display: flex;
     flex-wrap: wrap;
@@ -59,13 +87,23 @@
 }
 
    .iaVolleyContainer {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+       width: 100%;
+       height: 92vh;
+       background-color: rgb(23, 23, 23);
+       color: white;
+   }
+
+      .iaVolleyContainerLight {
     display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
         height: 92vh;
-        background-color: rgb(23, 23, 23);
-        color: white;
+        background-color: #464646;
+        color: black;
    }
 
 .imagesBeOnTime {
@@ -140,9 +178,6 @@
                 height: auto;
                 margin-right: 2.5rem;
             }
-
-       
-
 }
 
 @media (max-width: 768px) {
@@ -152,11 +187,11 @@
         height: 160vh;
     }
 
-           .iaVolleyContainer {
+    .iaVolleyContainer {
         flex-direction: column;
-            align-items: center;
-            height: 145vh;
-           }
+        align-items: center;
+        height: 145vh;
+    }
 
     .beOnTimeContainer,
     .netflixCopyContainer {
@@ -215,6 +250,34 @@
     75% {
         transform: translateY(10px);
         color: rgb(57, 116, 210);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce-in-topLight {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+        color: rgb(255, 255, 255);
+    }
+
+    25% {
+        transform: translateY(10px);
+        color: rgb(255, 255, 255);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        color: rgb(255, 255, 255);
+    }
+
+    75% {
+        transform: translateY(10px);
+        color: rgb(255, 255, 255);
     }
 
     100% {

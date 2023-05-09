@@ -76,7 +76,7 @@ function IaVolleyDescription() {
     top: 40,
     left: 30,
     zIndex: 1,
-    border: "2px solid grey",
+    border: "1px solid grey",
     borderRadius: "10px",
     display: "flex",
     flexDirection: "column",
@@ -85,7 +85,7 @@ function IaVolleyDescription() {
   };
 
   const cardBackStyle = {
-    border: "2px solid grey",
+    border: "1px solid grey",
     textAlign: "center",
     backgroundColor: "#3e5cb6",
     color: "white",
@@ -137,7 +137,6 @@ function IaVolleyDescription() {
       <div
         onClick={handleClick}
         onKeyDown={(e) => handleKeyDown(e, "#my-projects")}
-        tabIndex={0}
         style={containerStyle}
       >
         <div className="swiper-container">
@@ -151,7 +150,7 @@ function IaVolleyDescription() {
                     src="/18.png"
                     alt="Soft Skills"
                   />
-                  <div>IA Volley</div>
+                  <div tabIndex={0}>IA Volley</div>
                   <div
                     style={buttonStyle}
                     onMouseEnter={handleMouseEnter}

@@ -3,6 +3,7 @@ import anime from "animejs";
 import styles from "../styles/landingOnSite.module.css";
 import { FormattedMessage } from "react-intl";
 import { Slide, Zoom, Flip, Bounce, Rotate, Fade, Roll } from "react-reveal";
+import { useSelector } from "react-redux";
 
 function LandingOnSite() {
 
@@ -11,6 +12,8 @@ function LandingOnSite() {
   const containerRef = useRef(null);
   const [isSquareVisible, setIsSquareVisible] = useState(true);
   const [isTextVisible, setIsTextVisible] = useState(false);
+
+  const darkMode = useSelector((state) => state.theme.darkMode);
 
   useEffect(() => {
     const squareTimeline = anime.timeline({
@@ -59,7 +62,12 @@ function LandingOnSite() {
   }, [isSquareVisible]);
 
   return (
-    <div className={styles.landingContainer} ref={containerRef}>
+    <div
+      className={
+        darkMode ? styles.landingContainer : styles.landingContainerLight
+      }
+      ref={containerRef}
+    >
       {isSquareVisible ? (
         <>
           <div className={styles.squareContainer}>
@@ -70,8 +78,8 @@ function LandingOnSite() {
       ) : (
         <>
           <Zoom left cascade duration={2000}>
-            <h1 className={styles.h1} style={{ color: "#fff" }}>
-              <div className={styles.title}>
+            <h1 className={styles.h1}>
+              <div className={darkMode ? styles.title : styles.titleLight}>
                 <span className={styles.contactLetter}>
                   {" "}
                   <FormattedMessage
@@ -166,8 +174,8 @@ function LandingOnSite() {
               </div>
             </h1>
           </Zoom>
-          <Zoom up cascade duration={6000}>
-            <div className={styles.title} style={{ color: "#fff" }}>
+          <Zoom bottom cascade duration={6000}>
+            <div className={darkMode ? styles.title : styles.titleLight}>
               <span className={styles.contactLetter}>
                 {" "}
                 <FormattedMessage id="proud" defaultMessage="I'm proud" />

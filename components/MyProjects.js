@@ -9,19 +9,26 @@ import Hearthstone from "./projects/Hearthstone";
 import IaVolleyDescription from "./projects/IaVolleyDescription";
 import IaVolley from "./projects/IaVolley";
 import { FormattedMessage } from "react-intl";
+import { useSelector } from "react-redux";
+
 
 function MyProjects() {
   const [isVisible, setIsVisible] = useState(false);
   
+  const darkMode = useSelector((state) => state.theme.darkMode);
 
-  const onScroll = () => {
-    const myProjectsElement = document.querySelector(`.${styles.myProjects}`);
+  
+const onScroll = () => {
+  const myProjectsElement = document.querySelector(`.${styles.myProjects}`);
+  if (myProjectsElement) {
     const { top, bottom } = myProjectsElement.getBoundingClientRect();
     if (top <= window.innerHeight && bottom >= 0) {
       setIsVisible(true);
       window.removeEventListener("scroll", onScroll);
     }
-  };
+  }
+};
+
 
   useEffect(() => {
     window.addEventListener("scroll", onScroll);
@@ -34,7 +41,7 @@ function MyProjects() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.myProjects}>
+      <div className={`${styles.myProjects} ${darkMode ? '' : styles.myProjectsLight}`}>
         {isVisible && (
           <>
             <span className={styles.letter} style={{ animationDelay: "0s" }}>
@@ -83,7 +90,7 @@ function MyProjects() {
           <NetFlixCopy />
         </div>
       </div>
-      <div id="my-projects2" className={styles.beOnTimeContainer}>
+      <div id="my-projects2" className={darkMode ? styles.beOnTimeContainer : styles.beOnTimeContainerLight}>
         <div
           className={`${styles.textBeOnTime} ${styles.descriptionContainer}`}
         >
@@ -103,7 +110,7 @@ function MyProjects() {
           <Hearthstone />
         </div>
       </div>
-      <div id="my-projects4" className={styles.iaVolleyContainer}>
+      <div id="my-projects4" className={darkMode ? styles.iaVolleyContainer : styles.iaVolleyContainerLight}>
         <div
           className={`${styles.textBeOnTime} ${styles.descriptionContainer}`}
         >

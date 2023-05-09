@@ -7,6 +7,15 @@
     align-items: center;
 }
 
+.bigcontainerLight {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #242424;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container {
     width: 80%;
     display: flex;
@@ -19,18 +28,29 @@
     width: 56.25%;
     padding-top: 56.25%;
     margin-bottom: 5%;
-    /* 16:9 Aspect Ratio a1d5e8*/
-    background: radial-gradient(circle at center, #1b1e1e 20%, #a1d5e8 20%, #000000 70%);
+    background: radial-gradient(circle at center, #1b1e1e 20%, #538ba0 20%, #000000 70%); 
+    /* background: radial-gradient(circle at center, #1b1e1e 20%, #ff4343 20%, #000000 70%); */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 2s ease-in-out;
+}
+
+.gradientBgLight {
+    position: relative;
+    width: 56.25%;
+    padding-top: 56.25%;
+    margin-bottom: 5%;
+    background: radial-gradient(circle at center, #242424 20%, #2c7995 20%, #242424 70%);
     border-radius: 10px;
     overflow: hidden;
     transition: transform 2s ease-in-out;
 }
 
 
-.gradientBg:hover {
+/* .gradientBg:hover {
     transform: scale(1.087);
     color: rgb(212, 223, 253)
-}
+} */
 
 .softSkillsImage {
     position: absolute;

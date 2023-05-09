@@ -2,11 +2,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: rgb(42, 42, 42);
     color: white;
     height: 80px;
-    width: 97%;
+    width: 100%;
     padding: 0 20px;
+}
+
+.containerLight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #C7C7E2;
+    color: rgb(0, 0, 0);
+    height: 80px;
+    width: 100%;
+    padding: 0 20px;
+    border: 1px solid black
 }
 
 .links {
@@ -26,6 +38,18 @@
     color:rgb(212, 223, 253)
 }
 
+.navitemsLight {
+    font-size: 1.6rem;
+    margin-right: 30px;
+    transition: transform 0.35s ease-in-out;
+    cursor: pointer;
+}
+
+.navitemsLight:hover {
+    transform: scale(1.2);
+    color: rgb(60, 60, 60)
+}
+
 .traduction {
     background-color: rgb(37, 36, 36);
     color: white;
@@ -43,40 +67,83 @@
 }
 
 .traduction:hover {
-    background-color: rgb(27, 27, 27);
+    background-color: rgb(43, 43, 43);
     transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
-.container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: black;
-        color: white;
-        height: 80px;
-        width: 88%;
+.traductionLight {
+    background-color: rgb(211, 211, 211);
+    color: rgb(0, 0, 0);
+    height: 2.5rem;
+    width: 6.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    border: 2px solid #545454;
+    transition: transform 0.35s ease-in-out;
+}
 
+.traductionLight:focus {
+    outline: none;
+    border-color: #66afe9;
+}
+
+.traductionLight:hover {
+    background-color: rgb(244, 244, 244);
+    transform: scale(1.1);
+}
+
+.moon {
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.moonLight {
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    color: rgb(51, 31, 182)
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 88%;
+    }
+
+    .containerLight {
+        width: 88%;
     }
     
     .links {
             display: flex;
             justify-content: flex-start;
-        }
+    }
 
     .links a:not(:last-child) {
         margin-right: 15px;
         /* Ajouter de la marge horizontale entre les liens, sauf le dernier */
     }
 
-    .navitems {
-        margin-right: 0;
-        margin-bottom: 0px;
-        display: block;
-        font-size: 1.42rem;
-    }
-
+        .navitems {
+            margin-right: 0;
+            margin-bottom: 0px;
+            display: block;
+            font-size: 1.42rem;
+        }
+    
         .navitems:hover {
+            transform: scale(1.1);
+        }
+
+        .navitemsLight {
+            margin-right: 0;
+            margin-bottom: 0px;
+            display: block;
+            font-size: 1.42rem;
+        }
+    
+        .navitemsLight:hover {
             transform: scale(1.1);
         }
 
@@ -84,8 +151,12 @@
     font-size: 0.8rem;
     width: 4.7rem;
     margin-right: 3rem;
-
 }
+    .traductionLight {
+        font-size: 0.8rem;
+        width: 4.7rem;
+        margin-right: 3rem;
+                }
 }
 
 

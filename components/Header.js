@@ -9,7 +9,7 @@ function Header() {
   return (
     <div className={styles.container}>
       <div className={styles.text}>
-        <Bounce right cascade duration={4500}>
+        <Bounce right cascade duration={3500}>
           {" "}
           <h1 className={styles.h1}>Florent Lelubez</h1>
         </Bounce>

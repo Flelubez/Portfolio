@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { MdContactMail } from "react-icons/md";
 import { FormattedMessage } from "react-intl";
 import { Slide, Zoom, Flip, Bounce, Rotate, Fade, Roll } from "react-reveal";
+import { useSelector } from "react-redux";
 
 
 function Contact() {
@@ -12,6 +13,8 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   
+  const darkMode = useSelector((state) => state.theme.darkMode);
+
     const isEmailValid = (email) => {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(email);
@@ -91,9 +94,9 @@ const sendEmail = async (e) => {
 
 return (
   <div className={styles.bigContainer}>
-    <div className={styles.title}>
+    <div className={darkMode ? styles.title : styles.titleLight}>
       <div className={styles.titleContent}>
-        <Roll down cascade duration={5000}>
+        <Roll down cascade duration={3000}>
           <span className={styles.contactLetter}>C</span>
           <span className={styles.contactLetter}>o</span>
           <span className={styles.contactLetter}>n</span>
@@ -104,13 +107,13 @@ return (
         </Roll>
       </div>
     </div>
-    <div className={styles.container}>
+    <div className={darkMode ? styles.container : styles.containerLight}>
       <ToastContainer
         position="bottom-center" // top-right, top-center, top-left, bottom-right, bottom-center, bottom-left
         toastClassName={`${styles.Toast}`}
       />
       <div className={styles.form}>
-        <Rotate top right duration={5000}>
+        <Rotate top right duration={3000}>
           <div>
             <label htmlFor="name" className={styles.label}>
               <FormattedMessage id="name" defaultMessage="Your name :" />
@@ -151,8 +154,8 @@ return (
             />
           </div>
 
-          <button type="submit" className={styles.button} onClick={sendEmail}>
-            <Roll right duration={5000}>
+          <button type="submit" className={darkMode ? styles.button : styles.buttonLight} onClick={sendEmail}>
+            <Roll right duration={3000}>
               <FormattedMessage id="submit" defaultMessage="Submit" />
             </Roll>
           </button>
@@ -170,7 +173,7 @@ return (
             className={styles.noStyleLink}
           >
             <div className={styles.flex}>
-              <Rotate top right duration={5000}>
+              <Rotate top right duration={3000}>
                 <div>
                   <img
                     src="/linkedin.png" // ou l'URL de votre image
@@ -178,7 +181,13 @@ return (
                     className={styles.linkedinIcon}
                   />
                 </div>
-                <div className={styles.linkedinDescription}>
+                <div
+                  className={
+                    darkMode
+                      ? styles.linkedinDescription
+                      : styles.linkedinDescriptionLight
+                  }
+                >
                   Florent Lelubez
                 </div>
               </Rotate>
@@ -194,7 +203,7 @@ return (
             className={styles.noStyleLink}
           >
             <div className={styles.flex}>
-              <Rotate top right duration={5000}>
+              <Rotate top right duration={3000}>
                 <div>
                   <img
                     src="/gmail.png" // ou l'URL de votre image
@@ -202,7 +211,13 @@ return (
                     className={styles.gmailIcon}
                   />
                 </div>
-                <div className={styles.linkedinDescription}>
+                <div
+                  className={
+                    darkMode
+                      ? styles.linkedinDescription
+                      : styles.linkedinDescriptionLight
+                  }
+                >
                   Florent.lelubez@gmail.com
                 </div>
               </Rotate>
@@ -210,13 +225,13 @@ return (
           </a>
         </div>
         <div className={styles.flex}>
-          <Rotate top right duration={5000}>
+          <Rotate top right duration={3000}>
             <img
               src="/phone.png" // ou l'URL de votre image
               alt="Phone logo"
               className={styles.phoneIcon}
             />
-            <div>+33676830895</div>
+            <div className={styles.phone}>+33676830895</div>
           </Rotate>
         </div>
         <a
@@ -227,7 +242,7 @@ return (
           className={styles.noStyleLink}
         >
           <div className={styles.flex}>
-            <Rotate top right duration={5000}>
+            <Rotate top right duration={3000}>
               <div>
                 <MdContactMail className={styles.resumeIcon} />
               </div>

@@ -33,7 +33,7 @@ const BeOnTime = () => {
  const imgStyle = {
    width: "100%",
    height: "auto",
-   border: "3px solid white",
+   border: "1px solid white",
    maxHeight: "85vh",
    maxWidth: "120vh",
    marginTop: "50px",
@@ -65,7 +65,7 @@ const BeOnTime = () => {
  const imgMegaStyle = {
    width: "100%",
    height: "auto",
-   border: "3px solid white",
+   border: "1px solid white",
    maxHeight: "71vh",
    maxWidth: "100vh",
    marginTop: "0.5vh",

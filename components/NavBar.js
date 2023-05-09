@@ -4,10 +4,22 @@ import styles from "../styles/navBar.module.css";
 import { FormattedMessage } from "react-intl";
 import { useDispatch, useSelector } from "react-redux";
 import { setLanguage } from "../reducers/language";
+import { toggleTheme } from "../reducers/theme";
+import { FaMoon } from "react-icons/fa";
+
+
+
 
 function NavBar({ updateSectionIndex }) {
   const dispatch = useDispatch();
   const locale = useSelector((state) => state.language.value);
+  const darkMode = useSelector((state) => state.theme.darkMode);
+
+  const handleThemeToggle = () => {
+    dispatch(toggleTheme());
+    console.log(darkMode, "Le mode dark/light a été basculé");
+  };
+
 
   const handleLocaleChange = (event) => {
     const selectedLocale = event.target.value;
@@ -39,14 +51,14 @@ function NavBar({ updateSectionIndex }) {
 
   return (
     <div
-      className={styles.container}
+      className={darkMode ? styles.container : styles.containerLight}
       style={{ position: "fixed", top: 0, zIndex: 100 }}
     >
       <div className={styles.links}>
         <a
           onClick={(e) => handleClick(e, "#about-me", 1)}
           onKeyDown={(e) => handleKeyDown(e, "#about-me")}
-          className={styles.navitems}
+          className={darkMode ? styles.navitems : styles.navitemsLight}
           tabIndex={0}
         >
           <FormattedMessage id="navAbout" defaultMessage="About" />
@@ -54,7 +66,7 @@ function NavBar({ updateSectionIndex }) {
         <a
           onClick={(e) => handleClick(e, "#skills", 2)}
           onKeyDown={(e) => handleKeyDown(e, "#skills")}
-          className={styles.navitems}
+          className={darkMode ? styles.navitems : styles.navitemsLight}
           tabIndex={0}
         >
           <FormattedMessage id="navSkills" defaultMessage="Skills" />
@@ -62,7 +74,7 @@ function NavBar({ updateSectionIndex }) {
         <a
           onClick={(e) => handleClick(e, "#my-projects", 3)}
           onKeyDown={(e) => handleKeyDown(e, "#my-projects")}
-          className={styles.navitems}
+          className={darkMode ? styles.navitems : styles.navitemsLight}
           tabIndex={0}
         >
           <FormattedMessage id="navProjects" defaultMessage="Projects" />
@@ -70,7 +82,7 @@ function NavBar({ updateSectionIndex }) {
         <a
           onClick={(e) => handleClick(e, "#contact", 4)}
           onKeyDown={(e) => handleKeyDown(e, "#contact")}
-          className={styles.navitems}
+          className={darkMode ? styles.navitems : styles.navitemsLight}
           tabIndex={0}
         >
           <FormattedMessage id="navContact" defaultMessage="Contact" />
@@ -78,7 +90,7 @@ function NavBar({ updateSectionIndex }) {
 
         <div>
           <select
-            className={styles.traduction}
+            className={darkMode ? styles.traduction : styles.traductionLight}
             value={locale}
             onChange={handleLocaleChange}
           >
@@ -86,6 +98,18 @@ function NavBar({ updateSectionIndex }) {
             <option value="fr">Français</option>
           </select>
         </div>
+        <span
+          onClick={handleThemeToggle}
+          onKeyDown={(e) => e.keyCode === 32 && handleThemeToggle()}
+          className={darkMode ? styles.moon : styles.moonLight}
+          tabIndex={0}
+          aria-label="Basculer le mode dark/light"
+          role="button"
+        >
+        
+            <FaMoon />
+       
+        </span>
       </div>
     </div>
   );
