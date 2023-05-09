@@ -1,5 +1,6 @@
 .container {
     background-color: rgb(175, 193, 222);
+    width: 110%;
 }
 
 .containerLight {
