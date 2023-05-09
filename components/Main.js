@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Test from "../components/Test";
 import NavBar from "@/components/NavBar";
 import Header from "@/components/Header";
 import MyProjects from "@/components/MyProjects";
