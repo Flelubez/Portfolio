@@ -130,9 +130,14 @@
 
 
 @media (max-width: 768px) {
-    .title {
-            font-size: 2rem;
+    .title,
+    .titleLight {
+            font-size: 10.5vw;
             text-align: center;
+            margin-left: 5%;
+            margin-right: 5%;
+            overflow-wrap: break-word;
+            word-wrap: break-word;     
         }
 
     .h1 {
