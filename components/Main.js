@@ -10,8 +10,6 @@ import { Element, scroller } from "react-scroll";
 import { Slide, Zoom, Flip, Bounce, Rotate, Fade, Roll } from "react-reveal";
 import { useSelector } from "react-redux";
 
-
-
 function Main() {
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [lastScrollTime, setLastScrollTime] = useState(0);
