@@ -17,7 +17,7 @@ function NavBar({ updateSectionIndex }) {
 
   const handleThemeToggle = () => {
     dispatch(toggleTheme());
-    console.log(darkMode, "Le mode dark/light a été basculé");
+    // console.log(darkMode, "Le mode dark/light a été basculé");
   };
 
 

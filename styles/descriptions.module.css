@@ -11,15 +11,17 @@
 }
 
 .cardBack {
-    width: 100%;
+    width: 90%;
     height: 70vh;
-    font-size: 160%;
+    font-size: 1.5vw;
+    padding-left: 5%;
+    padding-right: 1%;
 }
 
 .cardFront {
-    width: 100%;
+    width: 96%;
     height: 70vh;
-    font-size: 3rem;
+    font-size: 3vw;
     margin-left: 1.2rem;
 }
 
@@ -163,7 +165,7 @@
         width: 80%;
         font-size: 2.7rem;
         line-height: 3.5rem;
-        margin-left: -8%;
+        margin-left: -7%;
     }
 }
 

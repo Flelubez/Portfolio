@@ -73,8 +73,7 @@ const sendEmail = async (e) => {
     if (!response.ok) {
       throw new Error("Error sending Email");
     }
-
-    console.log("Mail sent");
+    // console.log("Mail sent");
     toast.success(
       <FormattedMessage
         id="mailSuccess"

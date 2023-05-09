@@ -3,6 +3,7 @@ import styles from "../styles/header.module.css";
 import { FormattedMessage } from "react-intl";
 import { Slide, Zoom, Flip, Bounce, Rotate, Fade, Roll } from "react-reveal";
 
+
 function Header() {
 
 
