@@ -113,6 +113,7 @@
         flex-wrap: wrap;
         min-height: 80px;
         height: auto;
+        box-sizing: border-box;
     }
     
     .links {
