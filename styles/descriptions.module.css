@@ -126,17 +126,18 @@
 
     .cardBack {
             width: 80%;
-            font-size: 1.5rem;
+            font-size: 1rem;
             line-height: 2rem;
             margin-right: -7%;
+            padding-right: 3%;
 
     }
 
     .cardFront {
              width: 80%;
-             font-size: 3rem;
-             line-height: 2rem;
-             margin-left: 0%;
+             font-size: 2.7rem;
+             line-height: 3.5rem;
+             margin-left: -3%;
     }
 }
 

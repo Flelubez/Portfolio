@@ -113,6 +113,10 @@ a {
     color-scheme: dark;
   }
 } */
-body {
+body,
+html {
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  /* Empêcher le défilement horizontal */
 }

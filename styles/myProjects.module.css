@@ -126,7 +126,10 @@
 
     .iaVolleyContainer,
     .beOnTimeContainer,
-    .netflixCopyContainer {
+    .netflixCopyContainer,
+    .iaVolleyContainerLight,
+    .beOnTimeContainerLight,
+    .netflixCopyContainerLight {
         flex-direction: column;
         height: 158vh;
     }
@@ -147,7 +150,10 @@
 
     .iaVolleyContainer,
     .beOnTimeContainer,
-    .netflixCopyContainer {
+    .netflixCopyContainer,
+    .iaVolleyContainerLight,
+    .beOnTimeContainerLight,
+    .netflixCopyContainerLight {
         flex-direction: column;
         height: 158vh;
     }
@@ -166,9 +172,12 @@
             }
         
         
-            .iaVolleyContainer,
-            .beOnTimeContainer,
-            .netflixCopyContainer {
+        .iaVolleyContainer,
+        .beOnTimeContainer,
+        .netflixCopyContainer,
+        .iaVolleyContainerLight,
+        .beOnTimeContainerLight,
+        .netflixCopyContainerLight {
                 flex-direction: column;
                 height: 158vh;
             }
@@ -184,17 +193,20 @@
     .firstContainer {
         flex-direction: column;
         align-items: center;
-        height: 160vh;
+        height: 155vh;
     }
 
-    .iaVolleyContainer {
+    .iaVolleyContainer,
+    .iaVolleyContainerLight {
         flex-direction: column;
         align-items: center;
         height: 145vh;
     }
 
     .beOnTimeContainer,
-    .netflixCopyContainer {
+    .netflixCopyContainer,
+    .beOnTimeContainerLight,
+    .netflixCopyContainerLight {
         flex-direction: column;
         align-items: center;
         height: 160vh;
@@ -213,6 +225,12 @@
         width: 100%;
         height: auto;
         margin-right: 2.5rem;
+    }
+
+    .myProjects, .myProjectsLight {
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 280%;
     }
 }
 
