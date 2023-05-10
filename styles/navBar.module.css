@@ -94,7 +94,7 @@
 
 .moon {
     padding-left: 2rem;
-    font-size: 2rem;
+    font-size: 2.3rem;
     color: #ffffff;
     cursor: pointer;
     transition: 1s;
@@ -168,7 +168,7 @@
 
                 .moon {
     padding-left: 0rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .moonLight {
