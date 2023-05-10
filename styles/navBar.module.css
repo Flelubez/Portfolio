@@ -93,16 +93,28 @@
 }
 
 .moon {
-     padding-left: 2rem;
-    font-size: 1.5rem;
-    color: white;
+    padding-left: 2rem;
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.moon:hover {
+    color: #FFDD00;
     cursor: pointer;
 }
 
 .moonLight {
     padding-left: 2rem;
     font-size: 1.5rem;
-    color: rgb(51, 31, 182)
+    color: rgb(51, 31, 182);
+    transition: 1s;
+}
+
+.moonLight:hover {
+    color: #6c44ba;
+    cursor: pointer;
 }
 
 

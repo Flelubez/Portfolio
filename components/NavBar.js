@@ -5,7 +5,9 @@ import { FormattedMessage } from "react-intl";
 import { useDispatch, useSelector } from "react-redux";
 import { setLanguage } from "../reducers/language";
 import { toggleTheme } from "../reducers/theme";
-import { FaMoon } from "react-icons/fa";
+import { FaMoon, FaRegLightbulb } from "react-icons/fa";
+import { BsFillSunFill } from "react-icons/bs";
+import { HiSun } from "react-icons/hi";
 
 
 
@@ -106,9 +108,7 @@ function NavBar({ updateSectionIndex }) {
           aria-label="Basculer le mode dark/light"
           role="button"
         >
-        
-            <FaMoon />
-       
+          {darkMode ? <HiSun /> : <FaMoon />}
         </span>
       </div>
     </div>
