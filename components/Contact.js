@@ -97,9 +97,6 @@ function Contact() {
   }
 };
 
-
-  
-
 return (
   <div className={styles.bigContainer}>
     <div className={darkMode ? styles.title : styles.titleLight}>
