@@ -13,9 +13,6 @@ import { toggleTheme } from "../reducers/theme";
 import { FaMoon} from "react-icons/fa";
 import { HiSun } from "react-icons/hi";
 
-
-
-
 function NavBar({ updateSectionIndex }) {
 
   const dispatch = useDispatch();
