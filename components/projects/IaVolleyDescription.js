@@ -1,9 +1,15 @@
 import { useState, useEffect } from "react";
+
 import Swiper from "swiper";
+
 import "swiper/swiper-bundle.min.css";
+
 import { GiReturnArrow } from "react-icons/gi";
+
 import { Slide } from "react-reveal";
+
 import styles from "../../styles/descriptions.module.css";
+
 import { FormattedMessage } from "react-intl";
 
 function IaVolleyDescription() {
@@ -20,6 +26,12 @@ function IaVolleyDescription() {
     }
   };
 
+  //turn the card to back or front
+  const handleClick = () => {
+    setIsFlipped(!isFlipped);
+  };
+
+  //Setup swiper.js to flip images
   useEffect(() => {
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
@@ -112,7 +124,6 @@ function IaVolleyDescription() {
     marginTop: "5%",
   };
 
-
   const imageStyleFront = {
     position: "absolute",
     zIndex: -1,
@@ -121,10 +132,6 @@ function IaVolleyDescription() {
   const imageStyleBack = {
     position: "absolute",
     zIndex: -1,
-  };
-
-  const handleClick = () => {
-    setIsFlipped(!isFlipped);
   };
 
   return (
@@ -162,7 +169,7 @@ function IaVolleyDescription() {
                     alt="Soft Skills"
                   />
 
-                  <div style={{ textAlign: "left"}}>
+                  <div style={{ textAlign: "left" }}>
                     <FormattedMessage
                       id="iaVolleyDescription"
                       defaultMessage="IaVolley, my fourth project, allowed me to explore artificial intelligence through the Brain.js library. The interface, connected to a backend and a database, enables the addition and utilization of data processed by the neural network to predict victories and defeats based on observed statistics."

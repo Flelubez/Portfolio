@@ -1,3 +1,5 @@
+/* main.module.css */
+
 .container {
     background-color: rgb(175, 193, 222);
     width: 100%;
@@ -8,11 +10,6 @@
 .containerLight {
     background-color: #C7C7E2
 }
-
-
-/* .container {
-    background-color: rgb(165, 165, 167);
-} */
 
 .fade-enter {
     opacity: 0;

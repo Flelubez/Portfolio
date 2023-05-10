@@ -115,7 +115,6 @@ const renderBullet = (index, className) => {
  return (
    <div className={styles.containerRight} tabIndex="0">
      {" "}
-     {/* Ajout de tabIndex="0" */}
      <Slide right duration={2000}>
        <Swiper
          ref={swiperRef} // Utilisation du useRef pour accéder à l'instance Swiper

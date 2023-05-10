@@ -1,3 +1,5 @@
+/* navBar.module.css */
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -129,52 +131,51 @@
     }
     
     .links {
-            display: flex;
-            justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
     }
 
     .links a:not(:last-child) {
         margin-right: 4%;
-          font-size: 3vw;
-        /* Ajouter de la marge horizontale entre les liens, sauf le dernier */
+        font-size: 3vw;
     }
 
-                .navitems,
-                .navitemsLight {
-            margin-right: 0px;
-            margin-bottom: 0px;
-            display: block;
-            width: 100%;
-        }
+    .navitems,
+    .navitemsLight {
+        margin-right: 0px;
+        margin-bottom: 0px;
+        display: block;
+        width: 100%;
+    }
     
-        .navitems:hover {
-            transform: scale(1.1);
-        }
+    .navitems:hover {
+        transform: scale(1.1);
+    }
     
-        .navitemsLight:hover {
-            transform: scale(1.1);
-        }
+    .navitemsLight:hover {
+        transform: scale(1.1);
+    }
 
-        .traduction {
-    font-size: 0.8rem;
-    width: 4.7rem;
-    margin-right: 0.5rem;
-}
+    .traduction {
+        font-size: 0.8rem;
+        width: 4.7rem;
+        margin-right: 0.5rem;
+    }
     .traductionLight {
         font-size: 0.8rem;
         width: 4.7rem;
         margin-right: 0.5rem;
-                }
+    }
 
-                .moon {
+    .moon {
     padding-left: 0rem;
     font-size: 2rem;
-}
+    }
 
-.moonLight {
+    .moonLight {
     padding-left: 0rem;
     font-size: 1.5rem;
-}
+    }
 }
 
 

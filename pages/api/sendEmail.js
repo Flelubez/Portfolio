@@ -1,4 +1,4 @@
-// pages/api/sendEmail.js
+//Allow to send mails by nodemailer
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 

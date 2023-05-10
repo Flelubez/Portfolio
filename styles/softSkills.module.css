@@ -1,3 +1,5 @@
+/* softSkills.module.css */
+
 .bigcontainer {
     width: 100%;
     min-height: 100vh;
@@ -28,12 +30,11 @@
     width: 56.25%;
     padding-top: 56.25%;
     margin-bottom: 5%;
-    background: radial-gradient(circle at center, #1b1e1e 20%, #538ba0 20%, #000000 70%); 
-    /* background: radial-gradient(circle at center, #1b1e1e 20%, #ff4343 20%, #000000 70%); */
+    background: radial-gradient(circle at center, #1b1e1e 20%, #538ba0 20%, #000000 70%);
     border-radius: 10px;
     overflow: hidden;
-    transition: transform 2s ease-in-out;
 }
+
 
 .gradientBgLight {
     position: relative;
@@ -43,14 +44,7 @@
     background: radial-gradient(circle at center, #242424 20%, #2c7995 20%, #242424 70%);
     border-radius: 10px;
     overflow: hidden;
-    transition: transform 2s ease-in-out;
 }
-
-
-/* .gradientBg:hover {
-    transform: scale(1.087);
-    color: rgb(212, 223, 253)
-} */
 
 .softSkillsImage {
     position: absolute;
@@ -60,6 +54,19 @@
     height: 100%;
     object-fit: cover;
     animation: rotate 10s linear infinite alternate;
+}
+
+.skills {
+    color: white;
+    font-size: 450%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-right: 12rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.skills:hover {
+    transform: scale(1.2);
+        color: rgb(212, 223, 253)
 }
 
 @keyframes rotate {
@@ -76,20 +83,6 @@
     }
 }
 
-.skills {
-    color: white;
-    font-size: 450%;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin-right: 12rem;
-    transition: transform 0.5s ease-in-out;
-}
-
-.skills:hover {
-    transform: scale(1.2);
-        color: rgb(212, 223, 253)
-}
-
-/* Ajout d'une règle de média pour les écrans de moins de 1400px */
 @media screen and (max-width: 1400px) {
     .container {
         flex-direction: column;
@@ -109,7 +102,6 @@
     }
 }
 
-/* Ajout d'une règle de média pour les écrans de moins de 1200px */
 @media screen and (max-width: 1200px) {
     .container {
             flex-direction: column;
@@ -129,7 +121,6 @@
     }
 }
 
-/* Ajout d'une règle de média pour les écrans de moins de 992px */
 @media screen and (max-width: 992px) {
     .gradientBg {
         width: 85%;
@@ -139,9 +130,6 @@
 
 
 @media screen and (max-width: 768px) {
-
-    /* Ajout d'une règle de média pour les écrans de moins de 768px */
-
         .skills {
 text-align: center;
 margin-right: 0rem;
@@ -163,7 +151,6 @@ margin-bottom: 5rem;
 }
 }
 
-/* Ajout d'une règle de média pour les écrans de moins de 576px */
 @media screen and (max-width: 576px) {
     .gradientBg {
         width: 100%;

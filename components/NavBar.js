@@ -1,28 +1,34 @@
 import React from "react";
-import { useEffect, useRef, useState } from "react";
+
 import styles from "../styles/navBar.module.css";
+
 import { FormattedMessage } from "react-intl";
+
 import { useDispatch, useSelector } from "react-redux";
+
 import { setLanguage } from "../reducers/language";
+
 import { toggleTheme } from "../reducers/theme";
-import { FaMoon, FaRegLightbulb } from "react-icons/fa";
-import { BsFillSunFill } from "react-icons/bs";
+
+import { FaMoon} from "react-icons/fa";
 import { HiSun } from "react-icons/hi";
 
 
 
 
 function NavBar({ updateSectionIndex }) {
+
   const dispatch = useDispatch();
   const locale = useSelector((state) => state.language.value);
   const darkMode = useSelector((state) => state.theme.darkMode);
 
+  //dispatch theme change between dark / light
   const handleThemeToggle = () => {
     dispatch(toggleTheme());
-    // console.log(darkMode, "Le mode dark/light a été basculé");
+    // console.log(darkMode, " dark/light mode change");
   };
 
-
+//dispatch language change between fr / en
   const handleLocaleChange = (event) => {
     const selectedLocale = event.target.value;
     dispatch(setLanguage(selectedLocale));
@@ -37,9 +43,9 @@ function NavBar({ updateSectionIndex }) {
     updateSectionIndex(newIndex);
   };
 
+  //Space Key => click
   const handleKeyDown = (event, targetId, newIndex) => {
     if (event.keyCode === 32) {
-      // code for space key
       event.preventDefault();
       const target = document.querySelector(targetId);
       const offset = target.offsetTop - 80;
@@ -48,8 +54,6 @@ function NavBar({ updateSectionIndex }) {
       updateSectionIndex(newIndex);
     }
   };
-
-  // Mettez à jour les appels à handleKeyDown pour inclure l'index de la section
 
   return (
     <div

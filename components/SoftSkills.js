@@ -1,7 +1,10 @@
 import React from "react";
+
 import { FormattedMessage } from "react-intl";
+
 import styles from "../styles/softSkills.module.css";
-import { Slide, Zoom, Flip, Bounce, Rotate, Fade, Roll } from "react-reveal";
+
+import { Zoom, Roll } from "react-reveal";
 import { useSelector } from "react-redux";
 
 function SoftSkills() {

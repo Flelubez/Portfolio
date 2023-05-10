@@ -1,9 +1,15 @@
 import { useState, useEffect } from "react";
+
 import Swiper from "swiper";
+
 import "swiper/swiper-bundle.min.css";
+
 import { GiReturnArrow } from "react-icons/gi";
+
 import { Slide } from "react-reveal";
-import styles from "../../styles/descriptions.module.css"; 
+
+import styles from "../../styles/descriptions.module.css";
+
 import { FormattedMessage } from "react-intl";
 
 function HearthstoneDescription() {
@@ -20,6 +26,12 @@ function HearthstoneDescription() {
     }
   };
 
+  //turn the card to back or front
+  const handleClick = () => {
+    setIsFlipped(!isFlipped);
+  };
+
+  //Setup swiper.js to flip images
   useEffect(() => {
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
@@ -112,20 +124,14 @@ function HearthstoneDescription() {
     marginTop: "5%",
   };
 
-
   const imageStyleFront = {
     position: "absolute",
     zIndex: -1,
   };
 
-
   const imageStyleBack = {
     position: "absolute",
     zIndex: -1,
-  };
-
-  const handleClick = () => {
-    setIsFlipped(!isFlipped);
   };
 
   return (
@@ -162,7 +168,7 @@ function HearthstoneDescription() {
                     src="/18.png"
                     alt="Soft Skills"
                   />
-                  <div style={{ textAlign: "left"}}>
+                  <div style={{ textAlign: "left" }}>
                     <FormattedMessage
                       id="HearthstoneDescription"
                       defaultMessage=" IaVolley, mon quatrième projet, m'a permis d'explorer

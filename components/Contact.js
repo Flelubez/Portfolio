@@ -1,10 +1,16 @@
 import styles from "../styles/contact.module.css";
+
 import { useState } from "react";
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 import { MdContactMail } from "react-icons/md";
+
 import { FormattedMessage } from "react-intl";
-import { Slide, Zoom, Flip, Bounce, Rotate, Fade, Roll } from "react-reveal";
+
+import { Rotate, Roll } from "react-reveal";
+
 import { useSelector } from "react-redux";
 
 
@@ -15,14 +21,14 @@ function Contact() {
   
   const darkMode = useSelector((state) => state.theme.darkMode);
 
-    const isEmailValid = (email) => {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(email);
-    };
+  const isEmailValid = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
-const handleKeyDown = (event, targetId) => {
-  console.log('click')
-  if (event.keyCode === 32) {
+  const handleKeyDown = (event, targetId) => {
+    console.log('click')
+   if (event.keyCode === 32) {
     event.preventDefault();
     const element = document.getElementById(targetId);
     if (element) {
@@ -31,9 +37,10 @@ const handleKeyDown = (event, targetId) => {
   }
 };
 
-const sendEmail = async (e) => {
-  e.preventDefault();
 
+//Send Mail and check errors with inputs
+  const sendEmail = async (e) => {
+  e.preventDefault();
   if (!isEmailValid(email)) {
      toast.error(
        <FormattedMessage
@@ -46,14 +53,17 @@ const sendEmail = async (e) => {
 
   if (!name) {
     toast.error(
-      <FormattedMessage id="nameValid" defaultMessage="Please, add a name 🙁" />
+      <FormattedMessage
+          id="nameValid"
+          defaultMessage="Please, add a name 🙁"
+          />
     );
     return;
   }
 
-    if (!message) {
-      toast.error(
-        <FormattedMessage
+  if (!message) {
+    toast.error(
+      <FormattedMessage
           id="messageValid"
           defaultMessage="Please, add a message 😒"
         />
@@ -73,7 +83,6 @@ const sendEmail = async (e) => {
     if (!response.ok) {
       throw new Error("Error sending Email");
     }
-    // console.log("Mail sent");
     toast.success(
       <FormattedMessage
         id="mailSuccess"
@@ -108,7 +117,7 @@ return (
     </div>
     <div className={darkMode ? styles.container : styles.containerLight}>
       <ToastContainer
-        position="bottom-center" // top-right, top-center, top-left, bottom-right, bottom-center, bottom-left
+        position="bottom-center"
         toastClassName={`${styles.Toast}`}
       />
       <div className={styles.form}>
@@ -130,7 +139,6 @@ return (
             <label htmlFor="email" className={styles.label}>
               <FormattedMessage id="mail" defaultMessage="Your mail :" />
             </label>
-
             <input
               type="email"
               id="email"
@@ -152,7 +160,6 @@ return (
               className={styles.textarea}
             />
           </div>
-
           <button
             type="submit"
             className={darkMode ? styles.button : styles.buttonLight}
@@ -179,7 +186,7 @@ return (
               <Rotate top right duration={3000}>
                 <div>
                   <img
-                    src="/linkedin.png" // ou l'URL de votre image
+                    src="/linkedin.png"
                     alt="LinkedIn logo"
                     className={styles.linkedinIcon}
                   />
@@ -209,7 +216,7 @@ return (
               <Rotate top right duration={3000}>
                 <div>
                   <img
-                    src="/gmail.png" // ou l'URL de votre image
+                    src="/gmail.png"
                     alt="Gmail logo"
                     className={styles.gmailIcon}
                   />
@@ -230,7 +237,7 @@ return (
         <div className={styles.flex}>
           <Rotate top right duration={3000}>
             <img
-              src="/phone.png" // ou l'URL de votre image
+              src="/phone.png"
               alt="Phone logo"
               className={styles.phoneIcon}
             />

@@ -10,14 +10,13 @@ function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
       <ReduxIntlProvider>
-        <AppWrapper>
           <Component {...pageProps} />
-        </AppWrapper>
       </ReduxIntlProvider>
     </Provider>
   );
 }
 
+//Setup traductor with json who depends of locale value
 const ReduxIntlProvider = ({ children }) => {
   const locale = useSelector((state) => state.language.value);
 
@@ -25,16 +24,6 @@ const ReduxIntlProvider = ({ children }) => {
     <IntlProvider locale={locale} messages={messages[locale]}>
       {children}
     </IntlProvider>
-  );
-};
-
-const AppWrapper = ({ children }) => {
-  const darkMode = useSelector((state) => state.theme.darkMode);
-
-  return (
-    <div className={`App ${darkMode ? "dark-mode" : "light-mode"}`}>
-      {children}
-    </div>
   );
 };
 

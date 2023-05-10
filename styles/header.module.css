@@ -1,3 +1,5 @@
+/* header.module.css */
+
 .container {
     display: flex;
     flex-direction: row;
@@ -9,37 +11,12 @@
     padding: 20px;
 }
 
-@media only screen and (max-width: 1400px) {
-    .container {
-        flex-direction: column;
-        height: auto;
-    }
-    
-    .image {
-        height: 60%;
-        width: 60%;
-    }
-}
-
-
-@media only screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .image {
-        height: 100%;
-        width: 100%;
-    }
-}
-
 .h1 {
     font-size: 239%;
 }
 
 .textImportant {
-font-weight: bold;
+    font-weight: bold;
 }
 
 .text {
@@ -67,4 +44,29 @@ font-weight: bold;
     height: auto;
     border-radius: 50%;
     object-fit: cover;
+}
+
+@media only screen and (max-width: 1400px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .image {
+        height: 60%;
+        width: 60%;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .image {
+        height: 100%;
+        width: 100%;
+    }
 }

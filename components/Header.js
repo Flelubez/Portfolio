@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+
 import styles from "../styles/header.module.css";
+
 import { FormattedMessage } from "react-intl";
-import { Slide, Zoom, Flip, Bounce, Rotate, Fade, Roll } from "react-reveal";
+
+import { Zoom, Bounce } from "react-reveal";
 
 
 function Header() {
-
 
   return (
     <div className={styles.container}>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import NavBar from "@/components/NavBar";
 import Header from "@/components/Header";
 import MyProjects from "@/components/MyProjects";
@@ -6,18 +7,24 @@ import LandingOnSite from "@/components/LandingOnSite";
 import SoftSkills from "./SoftSkills";
 import Contact from "./Contact";
 import Footer from "./Footer";
+
 import styles from "../styles/main.module.css";
-import { Element, scroller } from "react-scroll";
-import { Slide, Zoom, Flip, Bounce, Rotate, Fade, Roll } from "react-reveal";
+
+import { scroller } from "react-scroll";
+
+import { Slide } from "react-reveal";
+
 import { useSelector } from "react-redux";
 
 
 function Main() {
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [lastScrollTime, setLastScrollTime] = useState(0);
+
    const darkMode = useSelector((state) => state.theme.darkMode);
 
-  //handleResize + useEffect qui suit permet d'avoir la taille de l'écran en direct
+  //to have window size on logs
+  /*
     const handleResize = () => {
       console.log(window.innerWidth);
     };
@@ -30,12 +37,12 @@ function Main() {
       return () => {
         window.removeEventListener("resize", handleResize);
       };
-    }, []);
+    }, []);*/
   
+    //Scroll section by section
   const updateSectionIndex = (newIndex) => {
     setCurrentStepIndex(newIndex);
   };
-
 
   const sections = [
     { id: "landing", offset: 0 },
@@ -48,21 +55,18 @@ function Main() {
     { id: "contact", offset: -20 },
   ];
 
+  //Stop auto scroll bellow 1450px
 const handleScroll = (e) => {
   if (window.innerWidth < 1450) {
-    // Vérifie si la largeur de l'écran est inférieure à 768px
-    return; // Arrête la fonction de défilement
+    return;
   }
-  console.log(currentStepIndex);
+
+  //console.log(currentStepIndex);
   e.preventDefault();
   const currentTime = new Date().getTime();
   const direction = e.deltaY > 0 ? 1 : -1;
   let nextIndex = currentStepIndex + direction;
 
-  // Modification: vérifie si la section actuelle est "contact" et que l'utilisateur fait défiler vers le haut
-  // if (currentStepIndex === 7 && direction === 1) {
-  //   nextIndex = 0; // Force à aller à la section "my-projects3"
-  // }
   // Check if double scroll occurred within 500ms
   if (currentTime - lastScrollTime < 300) {
     // Ignore this scroll and scroll to the current section again
@@ -89,9 +93,6 @@ const handleScroll = (e) => {
     });
   }
 };
-
-
-
 
   useEffect(() => {
     window.addEventListener("wheel", handleScroll, { passive: false });
@@ -134,5 +135,3 @@ return (
 }
 
 export default Main;
-
-''

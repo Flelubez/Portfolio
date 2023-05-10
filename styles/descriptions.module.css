@@ -1,7 +1,8 @@
+/* descriptions.module.css */
+
 .container {
     font-size: 2.5rem;
     position: relative;
-    /* Ajoutez la position relative au container parent */
 }
 
 .containerRight {
@@ -28,9 +29,7 @@
 .imageFront {
     position: absolute;
     left: 0;
-    /* Définit la position horizontale de l'image à gauche */
     bottom: 0;
-    /* Définit la position verticale de l'image en bas */
     height: 70%;
     width: 98%;
     border-radius: 1rem;
@@ -39,12 +38,22 @@
 .imageBack {
     position: absolute;
     left: 0;
-    /* Définit la position horizontale de l'image à gauche */
     bottom: 0;
-    /* Définit la position verticale de l'image en bas */
     height: 40%;
     width: 70%;
-        border-radius: 1rem;
+    border-radius: 1rem;
+}
+
+.bullet {
+    width: 40px;
+    height: 40px;
+    background-color: #007AFF
+}
+
+.bullet2 {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 87, 87);
 }
 
 
@@ -73,7 +82,7 @@
 }
 
 @media (max-width: 1150px) {
-.containerRight {
+    .containerRight {
         padding-left: 15%;
         margin-right: 2%;
         margin-left: 2%;
@@ -168,30 +177,3 @@
         margin-left: -7%;
     }
 }
-
-
-.bullet {
-    width: 40px;
-    height: 40px;
-    background-color: #007AFF
-}
-
-.bullet2 {
-    width: 40px;
-    height: 40px;
-    background-color: rgb(255, 87, 87);
-}
-
-/* .bulletActive {
-    width: 40px;
-    height: 40px;
-    background-color: rgb(115, 110, 216);
-}
-
-
-
-.bulletActive2 {
-    width: 40px;
-    height: 40px;
-    background-color: red;
-} */

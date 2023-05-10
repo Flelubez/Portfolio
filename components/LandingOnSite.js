@@ -1,8 +1,13 @@
 import React, { useRef, useEffect, useState } from "react";
+
 import anime from "animejs";
+
 import styles from "../styles/landingOnSite.module.css";
+
 import { FormattedMessage } from "react-intl";
-import { Slide, Zoom, Flip, Bounce, Rotate, Fade, Roll } from "react-reveal";
+
+import { Zoom } from "react-reveal";
+
 import { useSelector } from "react-redux";
 
 function LandingOnSite() {
@@ -15,6 +20,7 @@ function LandingOnSite() {
 
   const darkMode = useSelector((state) => state.theme.darkMode);
 
+  //Setup anime.js
   useEffect(() => {
     const squareTimeline = anime.timeline({
       easing: "easeInOutSine",
@@ -39,6 +45,7 @@ function LandingOnSite() {
     squareTimeline.play();
   }, []);
 
+  //Setup 2nd animations after the first one
   useEffect(() => {
     const textTimeline = anime.timeline({
       easing: "easeInOutSine",

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import BeOnTime from "./projects/BeOnTime";
 import BeOnTimeDescription from "./projects/BeOnTimeDescription";
 import NetFlixCopy from "./projects/NetFlixCopy";
@@ -8,16 +9,19 @@ import HearthstoneDescription from "./projects/HearthstoneDescription";
 import Hearthstone from "./projects/Hearthstone";
 import IaVolleyDescription from "./projects/IaVolleyDescription";
 import IaVolley from "./projects/IaVolley";
+
 import { FormattedMessage } from "react-intl";
+
 import { useSelector } from "react-redux";
 
 
 function MyProjects() {
+
   const [isVisible, setIsVisible] = useState(false);
   
   const darkMode = useSelector((state) => state.theme.darkMode);
 
-  
+  //Setup auto scrolling on Projects sections
 const onScroll = () => {
   const myProjectsElement = document.querySelector(`.${styles.myProjects}`);
   if (myProjectsElement) {
@@ -28,7 +32,6 @@ const onScroll = () => {
     }
   }
 };
-
 
   useEffect(() => {
     window.addEventListener("scroll", onScroll);

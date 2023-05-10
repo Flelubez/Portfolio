@@ -25,18 +25,20 @@ function BeOnTimeDescription() {
     }
   };
 
-    const handleMouseEnter = () => {
-      setIsHovered(true);
-    };
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
 
-    const handleMouseLeave = () => {
-      setIsHovered(false);
-    };
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+  
+  //turn the card to back or front
+  const handleClick = () => {
+    setIsFlipped(!isFlipped);
+  };
 
-      const handleClick = () => {
-        setIsFlipped(!isFlipped);
-      };
-
+  //Setup swiper.js to flip images
   useEffect(() => {
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
@@ -56,8 +58,6 @@ function BeOnTimeDescription() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-
 
   const containerStyle = {
     fontSize: "125%",
@@ -120,12 +120,12 @@ function BeOnTimeDescription() {
     textAlign: "center",
     transition: "color 1s ease-in-out",
     transitionDuration: "1s",
-    marginTop : "5%"
+    marginTop: "5%",
   };
 
   const imageStyleFront = {
     position: "absolute",
-    zIndex: -1
+    zIndex: -1,
   };
 
   const imageStyleBack = {
@@ -167,7 +167,7 @@ function BeOnTimeDescription() {
                     src="/18.png"
                     alt="Soft Skills"
                   />
-                  <div style={{ textAlign: "left"}}>
+                  <div style={{ textAlign: "left" }}>
                     <FormattedMessage
                       id="BeOnTimeDescription"
                       defaultMessage=" IaVolley, mon quatrième projet, m'a permis d'explorer
