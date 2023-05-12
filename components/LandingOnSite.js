@@ -137,25 +137,31 @@ function LandingOnSite() {
                   <FormattedMessage id="11" defaultMessage=" " />
                 </span>
                 {language === "en" && <span>&nbsp;</span>}
-                <span className={language === "en" ? styles.nowrap : styles.none}>
+                <span
+                  className={language === "en" ? styles.nowrap : styles.none}
+                >
                   <span className={styles.contactLetter}>
                     <FormattedMessage id="12" defaultMessage=" " />
                   </span>
                   <span className={styles.contactLetter}>
                     <FormattedMessage id="13" defaultMessage=" " />
                   </span>
-                  {language === "fr" && <span>&nbsp;</span>}
-                  <span className={styles.contactLetter}>
-                    {" "}
-                    <FormattedMessage id="14" defaultMessage=" " />
-                  </span>
-                  <span className={styles.contactLetter}>
-                    {" "}
-                    <FormattedMessage id="15" defaultMessage=" " />
-                  </span>
-                  <span className={styles.contactLetter}>
-                    {" "}
-                    <FormattedMessage id="16" defaultMessage=" " />
+                  <span
+                    className={language === "fr" ? styles.nowrap : styles.none}
+                  >
+                    {language === "fr" && <span>&nbsp;</span>}
+                    <span className={styles.contactLetter}>
+                      {" "}
+                      <FormattedMessage id="14" defaultMessage=" " />
+                    </span>
+                    <span className={styles.contactLetter}>
+                      {" "}
+                      <FormattedMessage id="15" defaultMessage=" " />
+                    </span>
+                    <span className={styles.contactLetter}>
+                      {" "}
+                      <FormattedMessage id="16" defaultMessage=" " />
+                    </span>
                   </span>
                   {language === "fr" && <span>&nbsp;</span>}
                   <span className={styles.contactLetter}>
