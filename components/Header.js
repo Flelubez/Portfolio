@@ -14,7 +14,10 @@ function Header() {
       <div className={styles.text}>
         <Bounce right cascade duration={3500}>
           {" "}
-          <h1 className={styles.h1}>Florent Lelubez</h1>
+          <h1 className={styles.h1}>
+            <div>Florent&nbsp;</div>
+            <div> Lelubez</div>
+          </h1>
         </Bounce>
         <Bounce left cascade duration={3000}>
           <div>

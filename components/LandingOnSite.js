@@ -19,6 +19,7 @@ function LandingOnSite() {
   const [isTextVisible, setIsTextVisible] = useState(false);
 
   const darkMode = useSelector((state) => state.theme.darkMode);
+  const language = useSelector((state) => state.language.value);
 
   //Setup anime.js
   useEffect(() => {
@@ -117,6 +118,7 @@ function LandingOnSite() {
                 <span className={styles.contactLetter}>
                   <FormattedMessage id="7" defaultMessage=" " />
                 </span>
+                {language === "en" && <span>&nbsp;</span>}
                 <span className={styles.contactLetter}>
                   <FormattedMessage id="8" defaultMessage=" " />
                 </span>
@@ -124,6 +126,8 @@ function LandingOnSite() {
                   {" "}
                   <FormattedMessage id="9" defaultMessage=" " />
                 </span>
+                {language === "fr" && <span>&nbsp;</span>}
+                {language === "en" && <span>&nbsp;</span>}
                 <span className={styles.contactLetter}>
                   {" "}
                   <FormattedMessage id="10" defaultMessage=" " />
@@ -132,43 +136,48 @@ function LandingOnSite() {
                   {" "}
                   <FormattedMessage id="11" defaultMessage=" " />
                 </span>
-                <span className={styles.contactLetter}>
-                  <FormattedMessage id="12" defaultMessage=" " />
-                </span>
-                <span className={styles.contactLetter}>
-                  <FormattedMessage id="13" defaultMessage=" " />
-                </span>
-                <span className={styles.contactLetter}>
-                  {" "}
-                  <FormattedMessage id="14" defaultMessage=" " />
-                </span>
-                <span className={styles.contactLetter}>
-                  {" "}
-                  <FormattedMessage id="15" defaultMessage=" " />
-                </span>
-                <span className={styles.contactLetter}>
-                  {" "}
-                  <FormattedMessage id="16" defaultMessage=" " />
-                </span>
-                <span className={styles.contactLetter}>
-                  {" "}
-                  <FormattedMessage id="17" defaultMessage=" " />
-                </span>
-                <span className={styles.contactLetter}>
-                  {" "}
-                  <FormattedMessage id="18" defaultMessage=" " />
-                </span>
-                <span className={styles.contactLetter}>
-                  {" "}
-                  <FormattedMessage id="19" defaultMessage=" " />
-                </span>
-                <span className={styles.contactLetter}>
-                  {" "}
-                  <FormattedMessage id="20" defaultMessage=" " />
-                </span>
-                <span className={styles.contactLetter}>
-                  {" "}
-                  <FormattedMessage id="21" defaultMessage=" " />
+                {language === "en" && <span>&nbsp;</span>}
+                <span className={language === "en" ? styles.nowrap : styles.none}>
+                  <span className={styles.contactLetter}>
+                    <FormattedMessage id="12" defaultMessage=" " />
+                  </span>
+                  <span className={styles.contactLetter}>
+                    <FormattedMessage id="13" defaultMessage=" " />
+                  </span>
+                  {language === "fr" && <span>&nbsp;</span>}
+                  <span className={styles.contactLetter}>
+                    {" "}
+                    <FormattedMessage id="14" defaultMessage=" " />
+                  </span>
+                  <span className={styles.contactLetter}>
+                    {" "}
+                    <FormattedMessage id="15" defaultMessage=" " />
+                  </span>
+                  <span className={styles.contactLetter}>
+                    {" "}
+                    <FormattedMessage id="16" defaultMessage=" " />
+                  </span>
+                  {language === "fr" && <span>&nbsp;</span>}
+                  <span className={styles.contactLetter}>
+                    {" "}
+                    <FormattedMessage id="17" defaultMessage=" " />
+                  </span>
+                  <span className={styles.contactLetter}>
+                    {" "}
+                    <FormattedMessage id="18" defaultMessage=" " />
+                  </span>
+                  <span className={styles.contactLetter}>
+                    {" "}
+                    <FormattedMessage id="19" defaultMessage=" " />
+                  </span>
+                  <span className={styles.contactLetter}>
+                    {" "}
+                    <FormattedMessage id="20" defaultMessage=" " />
+                  </span>
+                  <span className={styles.contactLetter}>
+                    {" "}
+                    <FormattedMessage id="21" defaultMessage=" " />
+                  </span>
                 </span>
                 <span className={styles.contactLetter}>
                   {" "}
@@ -177,6 +186,18 @@ function LandingOnSite() {
                 <span className={styles.contactLetter}>
                   {" "}
                   <FormattedMessage id="23" defaultMessage=" " />
+                </span>
+                <span className={styles.contactLetter}>
+                  {" "}
+                  <FormattedMessage id="24" defaultMessage=" " />
+                  <span className={styles.contactLetter}>
+                    {" "}
+                    <FormattedMessage id="25" defaultMessage=" " />
+                  </span>
+                  <span className={styles.contactLetter}>
+                    {" "}
+                    <FormattedMessage id="26" defaultMessage=" " />
+                  </span>
                 </span>
               </div>
             </h1>

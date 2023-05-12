@@ -131,6 +131,10 @@
     animation-timing-function: ease-out;
 }
 
+.nowrap {
+    white-space: nowrap;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0.5;
